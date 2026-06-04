@@ -1,7 +1,7 @@
 export default function MediaSection() {
   return (
-    <section id="media" className="py-[120px] bg-obsidian">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="media" className="py-16 md:py-20 lg:py-[120px] bg-obsidian">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-pp-muted mb-8">
           Featured in
         </div>
@@ -40,7 +40,7 @@ export default function MediaSection() {
           </div>
 
           {/* Right glyph panel */}
-          <div className="md:w-64 flex-shrink-0 bg-surface-2 flex flex-col items-center justify-center p-10 gap-4 border-t md:border-t-0 md:border-l border-line">
+          <div className="hidden md:flex md:w-64 flex-shrink-0 bg-surface-2 flex-col items-center justify-center p-10 gap-4 border-l border-line">
             <span className="text-venom text-8xl leading-none" aria-hidden="true">♞</span>
             <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-pp-muted text-center">
               World Chess Hall of Fame

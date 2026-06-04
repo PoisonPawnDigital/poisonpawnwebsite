@@ -1,7 +1,7 @@
 export default function ShiftSection() {
   return (
-    <section id="shift" className="py-[120px] relative bg-surface-2">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="shift" className="py-16 md:py-20 lg:py-[120px] relative bg-surface-2">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
           {/* Copy */}
@@ -10,7 +10,7 @@ export default function ShiftSection() {
               <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
                 The System
               </div>
-              <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none">
+              <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
                 Most people train execution. We train the decisions behind them.
               </h2>
             </div>
@@ -37,7 +37,7 @@ export default function ShiftSection() {
 
           {/* App card */}
           <div className="reveal">
-            <div className="border border-line bg-surface rounded-sm overflow-hidden max-w-sm mx-auto lg:mx-0">
+            <div className="border border-line bg-surface rounded-sm overflow-hidden w-full max-w-sm mx-auto lg:mx-0">
               {/* App topbar */}
               <div className="flex items-center justify-between px-5 py-3.5 border-b border-line">
                 <span className="font-sans text-[13px] font-semibold tracking-[0.2em] uppercase text-bone">

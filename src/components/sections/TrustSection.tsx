@@ -8,7 +8,7 @@ export default function TrustSection() {
   const all = [...clients, ...clients]
 
   return (
-    <div className="border-y border-line bg-surface py-5 overflow-hidden">
+    <div className="border-y border-line bg-surface py-5 overflow-hidden" style={{ contain: 'layout' }}>
       <div className="flex items-center gap-8 mb-3 px-8">
         <span className="font-mono text-[10px] tracking-[0.24em] uppercase text-pp-muted whitespace-nowrap flex-shrink-0">
           Trusted by Elite Performers

@@ -8,7 +8,7 @@ const press = [
 export default function PressSection() {
   return (
     <div className="border-y border-line bg-surface-2 py-12">
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-pp-muted mb-8">
           As Seen In
         </div>

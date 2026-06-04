@@ -7,13 +7,13 @@ const pillars = [
 
 export default function MethodSection() {
   return (
-    <section id="method" className="py-[120px] relative bg-obsidian">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="method" className="py-16 md:py-20 lg:py-[120px] relative bg-obsidian">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal mb-16 max-w-2xl">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
             The Poison Pawn Method™
           </div>
-          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
             Four dimensions of how you decide.
           </h2>
           <p className="text-bone-dim text-[16px] leading-relaxed">
@@ -24,7 +24,7 @@ export default function MethodSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line overflow-hidden rounded-sm">
           {pillars.map((p, i) => (
             <div
               key={p.idx}

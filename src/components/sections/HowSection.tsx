@@ -25,13 +25,13 @@ export default function HowSection() {
     <section id="how" className="bg-obsidian">
 
       {/* Hero */}
-      <div className="py-[120px] border-b border-line">
-        <div className="max-w-[1200px] mx-auto px-8">
+      <div className="py-16 md:py-20 lg:py-[120px] border-b border-line">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <div className="reveal max-w-3xl">
             <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
               The System
             </div>
-            <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
+            <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
               Performance breaks down when decisions do.
             </h2>
             <p className="text-bone-dim text-[16px] leading-relaxed">
@@ -44,7 +44,7 @@ export default function HowSection() {
 
       {/* Problem */}
       <div className="py-[100px] border-b border-line bg-surface">
-        <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <div className="reveal max-w-2xl">
             <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
               The Problem
@@ -65,7 +65,7 @@ export default function HowSection() {
 
       {/* Why chess */}
       <div className="py-[100px] border-b border-line">
-        <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <div className="reveal max-w-3xl">
             <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
               The Tool
@@ -87,7 +87,7 @@ export default function HowSection() {
 
       {/* Science 3-col */}
       <div className="py-[100px] border-b border-line bg-surface">
-        <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <div className="reveal mb-12 max-w-2xl">
             <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
               The Science
@@ -98,7 +98,7 @@ export default function HowSection() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-line">
             {scienceCards.map((c, i) => (
-              <div key={i} className="reveal bg-surface p-10 relative" data-d={i + 1}>
+              <div key={i} className="reveal bg-surface p-8 md:p-10 relative" data-d={i + 1}>
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-venom" />
                 <h3 className="text-venom text-[18px] font-extrabold uppercase tracking-[0.04em] mb-4">{c.title}</h3>
                 <p className="text-bone-dim text-[14px] leading-[1.75]">{c.body}</p>
@@ -110,7 +110,7 @@ export default function HowSection() {
 
       {/* Steps */}
       <div className="py-[100px]">
-        <div className="max-w-[1200px] mx-auto px-8">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
           <div className="reveal mb-14 max-w-2xl">
             <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
               How It Works · Inside an engagement

@@ -25,13 +25,13 @@ export default function MetricsSection() {
   }, [])
 
   return (
-    <section id="data" className="py-[120px] bg-surface-2">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="data" className="py-16 md:py-20 lg:py-[120px] bg-surface-2">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal mb-12 max-w-2xl">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
             The Data Layer
           </div>
-          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
             Decision-making, finally measurable.
           </h2>
           <p className="text-bone-dim text-[16px] leading-relaxed">
@@ -62,7 +62,7 @@ export default function MetricsSection() {
               <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-pp-muted">
                 Composite
               </div>
-              <div className="text-bone text-5xl font-extrabold leading-none">
+              <div className="text-bone text-3xl sm:text-5xl font-extrabold leading-none">
                 84<span className="text-pp-muted text-2xl font-normal">/100</span>
               </div>
               <div className="text-bone-dim text-[12px]">Top-decile · pressure decision-making</div>

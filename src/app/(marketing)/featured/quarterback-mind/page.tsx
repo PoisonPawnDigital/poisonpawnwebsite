@@ -70,7 +70,7 @@ export default function QuarterbackMindPage() {
           <div className="font-sans text-[13px] font-semibold tracking-[0.26em] uppercase text-bone-dim mb-2">
             Poison&nbsp;Pawn
           </div>
-          <h1 className="text-bone text-5xl md:text-6xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h1 className="text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-none mb-6">
             The Quarterback Mind
           </h1>
           <p className="text-bone-dim text-xl mb-4">
@@ -155,7 +155,7 @@ export default function QuarterbackMindPage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-line mb-14">
           {bigNums.map((n) => (
             <div key={n.n} className="bg-surface p-8">
-              <div className="text-venom text-5xl font-extrabold leading-none mb-3">{n.n}</div>
+              <div className="text-venom text-3xl sm:text-5xl font-extrabold leading-none mb-3">{n.n}</div>
               <div className="text-bone-dim text-[13px] leading-snug">{n.label}</div>
             </div>
           ))}

@@ -31,13 +31,13 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-20 max-w-[1200px] mx-auto px-8 pt-24 pb-16">
+      <div className="relative z-20 max-w-[1200px] mx-auto px-5 sm:px-8 pt-24 pb-16">
         <div className="max-w-[600px]">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">
             Performance System
           </div>
 
-          <h1 className="text-bone text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h1 className="text-bone text-4xl sm:text-5xl lg:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight leading-none mb-6">
             Train How<br />You Decide.
           </h1>
 

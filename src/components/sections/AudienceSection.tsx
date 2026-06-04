@@ -15,18 +15,18 @@ const conditions = [
 
 export default function AudienceSection() {
   return (
-    <section id="who" className="py-[120px] bg-obsidian">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="who" className="py-16 md:py-20 lg:py-[120px] bg-obsidian">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal mb-16 max-w-xl">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
             Who This Is For
           </div>
-          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none">
+          <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
             This is for you if.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-line">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-line overflow-hidden rounded-sm">
           {conditions.map((c, i) => (
             <div
               key={i}

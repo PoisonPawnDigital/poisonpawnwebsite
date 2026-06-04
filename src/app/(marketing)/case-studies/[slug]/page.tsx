@@ -55,7 +55,7 @@ export default async function CaseStudyPage({
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
             {cs.eyebrow}
           </div>
-          <h1 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h1 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
             {cs.h1}
           </h1>
           <p className="text-bone-dim text-[17px] leading-relaxed max-w-xl">{cs.deck}</p>

@@ -9,6 +9,9 @@ export default function RevealWrapper() {
     if (mounted.current) return
     mounted.current = true
 
+    // Immediately show anything already in the viewport on load
+    const all = document.querySelectorAll<HTMLElement>('.reveal')
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -18,10 +21,14 @@ export default function RevealWrapper() {
           }
         })
       },
-      { threshold: 0.12 },
+      {
+        threshold: 0.08,
+        // Fire slightly before element reaches viewport edge
+        rootMargin: '0px 0px -40px 0px',
+      },
     )
 
-    document.querySelectorAll<HTMLElement>('.reveal:not(.visible)').forEach((el) => io.observe(el))
+    all.forEach((el) => io.observe(el))
 
     return () => io.disconnect()
   }, [])

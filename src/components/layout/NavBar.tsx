@@ -51,9 +51,10 @@ export default function NavBar() {
         ))}
         <a
           href="#apply"
-          className="border border-line-strong px-[18px] py-[9px] rounded-sm text-[13px] tracking-[0.04em] text-bone hover:bg-venom hover:text-black hover:border-venom transition-all duration-300"
+          className="whitespace-nowrap border border-line-strong px-3 py-2 md:px-[18px] md:py-[9px] rounded-sm text-[12px] md:text-[13px] tracking-[0.04em] text-bone hover:bg-venom hover:text-black hover:border-venom transition-all duration-300"
         >
-          Apply For Training
+          <span className="md:hidden">Apply</span>
+          <span className="hidden md:inline">Apply For Training</span>
         </a>
       </div>
     </nav>

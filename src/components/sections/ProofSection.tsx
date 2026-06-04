@@ -63,11 +63,11 @@ const caseStudies = [
 
 export default function ProofSection() {
   return (
-    <section id="proof" className="py-[120px] bg-surface">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="proof" className="py-16 md:py-20 lg:py-[120px] bg-surface">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal mb-16">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">Proof</div>
-          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none">
+          <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
             Trusted by champions.
           </h2>
         </div>
@@ -106,10 +106,10 @@ export default function ProofSection() {
             <a
               key={cs.href}
               href={cs.href}
-              className="reveal group flex flex-col md:flex-row border border-line hover:border-venom/50 bg-surface-2 rounded-sm transition-colors duration-300"
+              className="reveal group flex flex-col sm:flex-row border border-line hover:border-venom/50 bg-surface-2 rounded-sm transition-colors duration-300"
             >
               {/* Left stat */}
-              <div className="md:w-64 flex-shrink-0 p-8 border-b md:border-b-0 md:border-r border-line">
+              <div className="sm:w-52 md:w-64 flex-shrink-0 p-6 sm:p-8 border-b sm:border-b-0 sm:border-r border-line">
                 <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-3">{cs.arena}</div>
                 <div className="text-bone text-3xl font-extrabold leading-none mb-2">{cs.stat}</div>
                 <div className="text-bone-dim text-[12px] leading-snug mb-4">{cs.statLabel}</div>

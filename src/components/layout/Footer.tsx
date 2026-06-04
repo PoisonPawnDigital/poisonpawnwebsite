@@ -39,7 +39,7 @@ function FooterLinkGroup({ title, links }: { title: string; links: { href: strin
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-surface pt-16 pb-8">
-      <div className="max-w-[1200px] mx-auto px-8">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="flex flex-col md:flex-row justify-between gap-12 pb-12 border-b border-line">
           <div className="max-w-xs">
             <div className="flex items-center gap-3 mb-4">
@@ -56,7 +56,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex gap-12 md:gap-16">
+          <div className="flex flex-wrap gap-10 md:gap-16">
             <FooterLinkGroup title="Platform" links={platformLinks} />
             <FooterLinkGroup title="Company" links={companyLinks} />
             <FooterLinkGroup title="Connect" links={connectLinks} />

@@ -92,6 +92,18 @@
   h1, h2, h3, h4 {
     @apply font-sans font-extrabold uppercase tracking-tight leading-none;
   }
+  /* Fluid section wrapper — used on every section */
+  .section-wrap {
+    @apply max-w-[1200px] mx-auto px-5 sm:px-8;
+  }
+  /* Fluid section padding */
+  .section-pad {
+    @apply py-16 md:py-20 lg:py-[120px];
+  }
+  /* Fluid section heading */
+  .section-h2 {
+    @apply text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none;
+  }
 }
 
 /* Grain overlay — applied via pseudo on body */
@@ -108,14 +120,33 @@ body::before {
 /* Reveal animation — toggled by IntersectionObserver */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(20px);
+  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
 }
 .reveal.visible {
   opacity: 1;
   transform: none;
 }
-.reveal[data-d="1"] { transition-delay: 0.1s; }
-.reveal[data-d="2"] { transition-delay: 0.2s; }
-.reveal[data-d="3"] { transition-delay: 0.3s; }
-.reveal[data-d="4"] { transition-delay: 0.4s; }
+.reveal[data-d="1"] { transition-delay: 0.08s; }
+.reveal[data-d="2"] { transition-delay: 0.16s; }
+.reveal[data-d="3"] { transition-delay: 0.24s; }
+.reveal[data-d="4"] { transition-delay: 0.32s; }
+
+/* Respect reduced motion — instantly show, skip transforms */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

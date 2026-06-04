@@ -1,7 +1,7 @@
 export default function FounderSection() {
   return (
-    <section id="founder" className="py-[120px] bg-surface">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="founder" className="py-16 md:py-20 lg:py-[120px] bg-surface">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal max-w-2xl" data-d="1">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">
             From the founder

@@ -14,13 +14,13 @@ const components = [
 
 export default function SystemSection() {
   return (
-    <section id="system" className="py-[120px] bg-surface">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="system" className="py-16 md:py-20 lg:py-[120px] bg-surface">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal mb-10 max-w-2xl">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
             The System
           </div>
-          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
             One closed loop. Built to compound.
           </h2>
           <p className="text-bone-dim text-[16px] leading-relaxed">
@@ -42,7 +42,7 @@ export default function SystemSection() {
         </div>
 
         {/* Component cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {components.map((c, i) => (
             <div
               key={c.tag}

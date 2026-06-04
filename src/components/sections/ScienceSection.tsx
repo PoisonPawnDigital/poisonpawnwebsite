@@ -21,13 +21,13 @@ const cards = [
 
 export default function ScienceSection() {
   return (
-    <section id="science" className="py-[120px] bg-surface">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="science" className="py-16 md:py-20 lg:py-[120px] bg-surface">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal mb-16 max-w-2xl">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
             The Science
           </div>
-          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
             Why this works at a level most training never reaches.
           </h2>
         </div>

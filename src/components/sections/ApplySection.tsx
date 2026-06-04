@@ -23,15 +23,15 @@ export default function ApplySection() {
   }
 
   return (
-    <section id="apply" className="py-[120px] bg-obsidian border-t border-line">
-      <div className="max-w-[1200px] mx-auto px-8">
+    <section id="apply" className="py-16 md:py-20 lg:py-[120px] bg-obsidian border-t border-line">
+      <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
 
         {/* CTA headline */}
         <div className="reveal text-center mb-16">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
             Apply Now
           </div>
-          <h2 className="text-bone text-5xl md:text-6xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h2 className="text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-none mb-6">
             The Edge<br />Starts Here.
           </h2>
           <p className="text-bone-dim text-[16px] leading-relaxed max-w-xl mx-auto">
