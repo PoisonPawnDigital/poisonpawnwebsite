@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poison Pawn — Case Study 03 — Artistic Swimming</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Spectral:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0d1014; --ink-2:#141922; --ink-3:#1b2230;
+    --line:#28303d; --line-soft:#1f2733;
+    --bone:#ece5d6; --bone-dim:#bcb6a8; --muted:#7e8696;
+    --brass:#c9a24b; --brass-soft:#e0c179; --rust:#b5705f;
+    --display:'Fraunces',Georgia,serif; --body:'Spectral',Georgia,serif; --mono:'Space Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink); color:var(--bone); font-family:var(--body); font-weight:300; line-height:1.6; -webkit-font-smoothing:antialiased;
+    background-image:linear-gradient(45deg,rgba(255,255,255,.012) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.012) 75%),linear-gradient(45deg,rgba(255,255,255,.012) 25%,transparent 25%,transparent 75%,rgba(255,255,255,.012) 75%);
+    background-size:64px 64px; background-position:0 0,32px 32px;}
+  .wrap{max-width:880px; margin:0 auto; padding:0 28px}
+  .topbar{display:flex; justify-content:space-between; align-items:center; padding:26px 0; border-bottom:1px solid var(--line-soft); margin-bottom:64px}
+  .mark{font-family:var(--mono); font-weight:700; letter-spacing:.22em; font-size:13px; text-transform:uppercase; color:var(--bone)}
+  .mark .glyph{color:var(--brass); margin-right:6px}
+  .filed{font-family:var(--mono); font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted)}
+  .reveal{opacity:0; transform:translateY(18px); animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1; transform:none}}
+  .eyebrow{font-family:var(--mono); font-size:11.5px; letter-spacing:.26em; text-transform:uppercase; color:var(--brass); margin-bottom:26px}
+  h1{font-family:var(--display); font-weight:500; font-size:clamp(38px,6vw,68px); line-height:1.02; letter-spacing:-.02em; color:var(--bone); margin-bottom:24px}
+  h1 em{font-style:italic; color:var(--brass-soft)}
+  .deck{font-size:clamp(17px,2.2vw,21px); color:var(--bone-dim); max-width:640px; font-weight:300; line-height:1.55}
+  .glance{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:12px; overflow:hidden; margin:56px 0 80px}
+  .glance > div{background:var(--ink-2); padding:22px 20px}
+  .glance .k{font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-bottom:9px}
+  .glance .v{font-family:var(--display); font-size:16px; color:var(--bone); line-height:1.35}
+  section{margin-bottom:62px}
+  .sec-label{font-family:var(--mono); font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass); margin-bottom:18px; display:flex; align-items:center; gap:10px}
+  .sec-label::before{content:"\265E"; color:var(--brass); font-size:15px}
+  h2{font-family:var(--display); font-weight:500; font-size:clamp(24px,3.4vw,32px); line-height:1.15; letter-spacing:-.01em; margin-bottom:18px; color:var(--bone)}
+  p.body{font-size:17.5px; color:var(--bone-dim); margin-bottom:16px; max-width:660px}
+  p.body strong{color:var(--bone); font-weight:500}
+  .data{background:linear-gradient(180deg,#11161f,#0e131b); border:1px solid var(--line); border-radius:18px; padding:38px 34px; box-shadow:0 24px 60px -30px rgba(0,0,0,.8)}
+  .data-head{font-family:var(--mono); font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:30px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px}
+  .data-head b{color:var(--brass); font-weight:700}
+  .ba{display:flex; align-items:flex-start; justify-content:center; gap:34px; flex-wrap:wrap; padding-bottom:36px; border-bottom:1px solid var(--line-soft); margin-bottom:8px}
+  .ba .pole{text-align:center; min-width:150px}
+  .ba .tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:10px}
+  .ba .num{font-family:var(--display); font-weight:900; font-size:58px; line-height:.92}
+  .ba .num.before{color:var(--rust)} .ba .num.after{color:var(--brass-soft)}
+  .ba .num small{font-size:18px; font-weight:600; color:var(--muted); display:block; margin-top:10px; letter-spacing:.04em}
+  .ba .medal{font-size:54px; line-height:1}
+  .ba .arrow{align-self:center; color:var(--brass); font-size:30px; padding-top:14px}
+  .timeline{display:flex; justify-content:space-between; align-items:flex-start; position:relative; margin:44px 6px 6px; }
+  .timeline::before{content:""; position:absolute; top:6px; left:30px; right:30px; height:2px; background:linear-gradient(90deg,var(--line),var(--brass-soft))}
+  .tnode{position:relative; text-align:center; flex:1; z-index:1; padding:0 6px}
+  .tnode .dot{width:14px; height:14px; border-radius:50%; background:var(--ink-3); border:2px solid var(--muted); margin:0 auto 16px}
+  .tnode.win .dot{background:var(--brass); border-color:var(--brass-soft); box-shadow:0 0 0 5px rgba(201,162,75,.16)}
+  .tnode .ty{font-family:var(--mono); font-size:13px; color:var(--bone); font-weight:700}
+  .tnode .td{font-size:12.5px; color:var(--muted); margin-top:7px; line-height:1.4}
+  .tnode.win .td{color:var(--bone-dim)}
+  .records{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:13px; margin-top:38px}
+  .rcard{background:var(--ink); border:1px solid var(--line); border-radius:13px; padding:24px 18px; text-align:center}
+  .rcard .rn{font-family:var(--display); font-weight:900; font-size:34px; color:var(--bone); line-height:1}
+  .rcard .rk{font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--brass); margin-top:12px}
+  .rcard .rs{font-size:12px; color:var(--muted); margin-top:4px}
+  .data-foot{font-family:var(--mono); font-size:10px; line-height:1.7; color:#5d6573; margin-top:30px}
+  .pq{border-left:2px solid var(--brass); padding:6px 0 6px 28px; margin:10px 0}
+  .pq blockquote{font-family:var(--display); font-style:italic; font-weight:400; font-size:clamp(20px,2.8vw,27px); line-height:1.4; color:var(--bone)}
+  .pq cite{display:block; font-style:normal; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-top:18px}
+  .placeholder{color:var(--rust); font-family:var(--mono); font-size:13px; font-style:normal}
+  .proof{display:flex; flex-wrap:wrap; gap:14px; margin-top:24px}
+  .plink{display:inline-flex; align-items:center; gap:9px; font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--bone); border:1px solid var(--line); border-radius:999px; padding:11px 18px; text-decoration:none; transition:border-color .25s,color .25s}
+  .plink:hover{border-color:var(--brass); color:var(--brass-soft)} .plink .dot{color:var(--brass)}
+  footer{border-top:1px solid var(--line-soft); margin-top:30px; padding:34px 0 60px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px}
+  footer .mark{font-size:12px} footer .note{font-family:var(--mono); font-size:10px; color:var(--muted); letter-spacing:.1em}
+  @media(max-width:560px){.glance{grid-template-columns:1fr} .ba .arrow{transform:rotate(90deg)} .timeline{flex-direction:column; gap:22px} .timeline::before{display:none} .tnode{display:flex; gap:14px; text-align:left; align-items:center} .tnode .dot{margin:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="mark"><span class="glyph">&#9822;</span>Poison&nbsp;Pawn</div>
+    <div class="filed">Case Study&nbsp;&nbsp;/&nbsp;&nbsp;03 &mdash; Artistic Swimming</div>
+  </div>
+
+  <div class="reveal" style="animation-delay:.05s">
+    <div class="eyebrow">Olympic Games &middot; National Team</div>
+    <h1>Twenty years without a medal. Then <em>Olympic silver.</em></h1>
+    <p class="deck">The Poison Pawn training system and the U.S. artistic swimming team &mdash; from missing the Games entirely to the Olympic podium.</p>
+  </div>
+
+  <div class="glance reveal" style="animation-delay:.18s">
+    <div><div class="k">Sport / Level</div><div class="v">Olympic artistic swimming</div></div>
+    <div><div class="k">Engagement</div><div class="v">Worked with the team &amp; its captain</div></div>
+    <div><div class="k">The Arc</div><div class="v">20-year drought &rarr; silver medal</div></div>
+  </div>
+
+  <section class="reveal" style="animation-delay:.05s">
+    <div class="sec-label">The starting point</div>
+    <h2>So close it hurt.</h2>
+    <p class="body">For two decades, the program hadn't reached an Olympic podium &mdash; and it had stopped qualifying for the team event altogether across four straight Games. The low point came one year out, when the team <strong>missed Olympic qualification by 0.66 points.</strong> The margin between heartbreak and history had never been thinner.</p>
+  </section>
+
+  <section class="reveal" style="animation-delay:.05s">
+    <div class="sec-label">The method</div>
+    <h2>Composure is a trainable skill.</h2>
+    <p class="body">In a sport judged on precision under enormous pressure, the smallest mental error is the difference between a podium and fourth place. Poison Pawn's training builds exactly that capacity: reading patterns, executing a process rather than reacting, and &mdash; critically &mdash; compartmentalizing a mistake so it never bleeds into the next moment of a routine.</p>
+    <p class="body"><span class="placeholder">[ Scope placeholder &mdash; add detail on your work with the team and its captain, and over what period. ]</span></p>
+  </section>
+
+  <section class="reveal" style="animation-delay:.05s">
+    <div class="sec-label">The result, in numbers</div>
+    <div class="data">
+      <div class="data-head"><span>U.S. Artistic Swimming &middot; Team Event</span><span><b>Drought to podium</b></span></div>
+      <div class="ba">
+        <div class="pole"><div class="tag">Olympic medals, prior 20 yrs</div><div class="num before" data-count="0">0<small>since 2004</small></div></div>
+        <div class="arrow">&rarr;</div>
+        <div class="pole"><div class="tag">Paris 2024</div><div class="medal">&#129352;</div><div class="num after" style="font-size:30px; margin-top:8px;">SILVER</div></div>
+      </div>
+
+      <div class="timeline">
+        <div class="tnode"><div class="dot"></div><div class="ty">2004</div><div class="td">Last Olympic medal (bronze)</div></div>
+        <div class="tnode"><div class="dot"></div><div class="ty">2008&ndash;2020</div><div class="td">Did not qualify, team event</div></div>
+        <div class="tnode win"><div class="dot"></div><div class="ty">2023</div><div class="td">World Championships bronze</div></div>
+        <div class="tnode win"><div class="dot"></div><div class="ty">2024</div><div class="td">Olympic silver, Paris</div></div>
+      </div>
+
+      <div class="records">
+        <div class="rcard"><div class="rn" data-count="20">0<span style="font-size:18px"> yrs</span></div><div class="rk">Medal drought ended</div><div class="rs">First since 2004</div></div>
+        <div class="rcard"><div class="rn">0.66</div><div class="rk">Points from missing</div><div class="rs">Qualification, one year prior</div></div>
+        <div class="rcard"><div class="rn">1996</div><div class="rk">Last better finish</div><div class="rs">Best result in 28 years</div></div>
+        <div class="rcard"><div class="rn">2nd</div><div class="rk">Of all nations</div><div class="rs">Behind only China</div></div>
+      </div>
+      <div class="data-foot">The U.S. ended a 20-year Olympic medal drought with silver in the team event at Paris 2024 &mdash; its best Olympic finish since 1996 &mdash; one year after missing qualification by 0.66 points. Figures from Olympic and public records.</div>
+    </div>
+  </section>
+
+  <section class="reveal" style="animation-delay:.05s">
+    <div class="sec-label">The bigger picture</div>
+    <h2>From the edge of elimination to the podium.</h2>
+    <p class="body">A team that couldn't even reach the Games returned and stood on the Olympic podium &mdash; a complete reversal at the highest level the sport offers. <span class="placeholder">[ Optional: one line on Poison Pawn's specific, attributable contribution to the turnaround. ]</span></p>
+  </section>
+
+  <section class="reveal" style="animation-delay:.05s">
+    <div class="sec-label">Proof</div>
+    <div class="pq">
+      <blockquote><span class="placeholder">[ Testimonial placeholder &mdash; a cleared quote from the team or its captain about the training's impact. ]</span></blockquote>
+      <cite>&mdash; Name, Title</cite>
+    </div>
+    <div class="proof">
+      <a class="plink" href="#"><span class="dot">&#9656;</span> Photo gallery (add assets)</a>
+      <a class="plink" href="#"><span class="dot">&#9656;</span> Press coverage (add link)</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="mark"><span class="glyph">&#9822;</span>Poison&nbsp;Pawn</div>
+    <div class="note">DRAFT &middot; FOR REVIEW</div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  function fmt(n,dec,comma){var v=dec?n.toFixed(1):Math.round(n).toString(); if(comma)v=parseInt(v,10).toLocaleString('en-US'); return v;}
+  function animate(el){
+    var target=parseFloat(el.getAttribute('data-count')); if(isNaN(target))return;
+    var comma=el.getAttribute('data-comma'); var dec=(target%1!==0)?1:0;
+    var span=el.querySelector('span'); var spanHTML=span?span.outerHTML:''; var dur=1500,start=null;
+    function step(ts){if(!start)start=ts; var p=Math.min((ts-start)/dur,1); var e=1-Math.pow(1-p,3); var cur=target*e;
+      el.innerHTML=fmt(cur,dec,comma)+spanHTML; if(p<1)requestAnimationFrame(step); else el.innerHTML=fmt(target,dec,comma)+spanHTML;}
+    requestAnimationFrame(step);
+  }
+  var els=document.querySelectorAll('[data-count]');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){animate(x.target);io.unobserve(x.target);}});},{threshold:.4}); els.forEach(function(el){io.observe(el);});}
+  else els.forEach(animate);
+})();
+</script>
+</body>
+</html>
