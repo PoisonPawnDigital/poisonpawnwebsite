@@ -44,14 +44,14 @@ Build each section as its own component in `components/sections/`:
 - [ ] 3.15: `ApplySection` — contact form wired to Formspree (client component)
 
 ## Phase 4: Additional Pages
-- [ ] 4.1: Create `app/case-studies/[slug]/page.tsx` with `generateStaticParams` for all 4 slugs
-- [ ] 4.2: Build shared `CaseStudyLayout` component (chess-dossier design from source HTML)
-- [ ] 4.3: Port content for `football-qb` case study — swap base64 → `next/image` with wchof-assets
-- [ ] 4.4: Port content for `baseball-bluejays` case study
-- [ ] 4.5: Port content for `artistic-swimming` case study
-- [ ] 4.6: Port content for `volleyball-ucla` case study
-- [ ] 4.7: Create `app/featured/quarterback-mind/page.tsx` — long-form featured article
-- [ ] 4.8: Add per-page metadata (title, description, OG tags) for all 6 pages
+- [x] 4.1: Create `app/case-studies/[slug]/page.tsx` with `generateStaticParams` for all 4 slugs
+- [x] 4.2: Build shared case study layout inline (dossier design, topbar, glance, data card)
+- [x] 4.3: Port content for `football-qb` — bar chart, 4 record cards, verified stats
+- [x] 4.4: Port content for `baseball-bluejays`
+- [x] 4.5: Port content for `artistic-swimming`
+- [x] 4.6: Port content for `volleyball-ucla`
+- [x] 4.7: Create `app/featured/quarterback-mind/page.tsx` — athlete grid with next/image, accolades, exhibit callout
+- [x] 4.8: `generateMetadata` per case study + static metadata on QB Mind page
 
 ## Phase 5: Performance, Polish & Launch Prep
 - [ ] 5.1: Replace all `<img>` tags with `next/image` (priority flag on hero poster)
