@@ -44,7 +44,7 @@ export default function NavBar() {
           <a
             key={href}
             href={href}
-            className="hidden lg:block text-bone-dim text-[13px] tracking-[0.04em] hover:text-bone transition-colors duration-250"
+            className="hidden lg:block text-bone-dim text-[13px] tracking-[0.04em] hover:text-bone transition-colors duration-250 py-3 px-1"
           >
             {label}
           </a>

@@ -120,7 +120,7 @@ export default function ProofSection() {
 
               {/* Right content */}
               <div className="flex-1 p-8">
-                <h4 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-6">{cs.title}</h4>
+                <h3 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-6">{cs.title}</h3>
                 <div className="flex flex-col gap-3 mb-6">
                   {cs.rows.map((r) => (
                     <div key={r.lbl} className="flex gap-6">

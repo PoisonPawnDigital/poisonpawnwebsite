@@ -22,7 +22,7 @@ const connectLinks = [
 function FooterLinkGroup({ title, links }: { title: string; links: { href: string; label: string }[] }) {
   return (
     <div className="flex flex-col gap-3">
-      <h5 className="font-mono text-[11px] tracking-[0.2em] uppercase text-venom">{title}</h5>
+      <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-venom mb-1">{title}</p>
       {links.map(({ href, label }) => (
         <a
           key={label}

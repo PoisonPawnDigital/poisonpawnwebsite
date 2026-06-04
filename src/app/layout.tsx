@@ -45,6 +45,10 @@ export default function RootLayout({
       lang="en"
       className={`${publicSans.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        {/* Preload hero poster so LCP resolves before video loads */}
+        <link rel="preload" as="image" href="/video/hero_poster.jpg" />
+      </head>
       <body>
         <NavBar />
         {children}

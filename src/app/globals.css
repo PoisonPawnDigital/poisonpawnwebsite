@@ -36,7 +36,7 @@
   --color-surface-2: #16140f;
   --color-bone: #f5ede0;
   --color-bone-dim: #b6ab99;
-  --color-pp-muted: #827a6c;
+  --color-pp-muted: #9e9484;  /* lightened from #827a6c for WCAG AA contrast */
   --color-venom: #d4a24a;
   --color-venom-dim: #a07c34;
   --color-gold-bright: #ecc678;

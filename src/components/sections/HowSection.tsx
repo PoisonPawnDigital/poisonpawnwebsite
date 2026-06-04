@@ -100,7 +100,7 @@ export default function HowSection() {
             {scienceCards.map((c, i) => (
               <div key={i} className="reveal bg-surface p-10 relative" data-d={i + 1}>
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-venom" />
-                <h4 className="text-venom text-[18px] font-extrabold uppercase tracking-[0.04em] mb-4">{c.title}</h4>
+                <h3 className="text-venom text-[18px] font-extrabold uppercase tracking-[0.04em] mb-4">{c.title}</h3>
                 <p className="text-bone-dim text-[14px] leading-[1.75]">{c.body}</p>
               </div>
             ))}
@@ -128,7 +128,7 @@ export default function HowSection() {
             {steps.map((s, i) => (
               <div key={s.num} className="reveal" data-d={i + 1}>
                 <div className="font-mono text-4xl font-bold text-venom/30 mb-4 leading-none">{s.num}</div>
-                <h4 className="text-bone text-[16px] font-extrabold uppercase tracking-tight mb-3">{s.title}</h4>
+                <h3 className="text-bone text-[16px] font-extrabold uppercase tracking-tight mb-3">{s.title}</h3>
                 <p className="text-bone-dim text-[14px] leading-relaxed">{s.body}</p>
               </div>
             ))}

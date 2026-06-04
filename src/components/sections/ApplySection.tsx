@@ -101,9 +101,11 @@ export default function ApplySection() {
                 </div>
               )}
               <div className="flex flex-col gap-1.5">
-                <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom">Domain</label>
+                <label htmlFor="apply-domain" className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom">Domain</label>
                 <select
+                  id="apply-domain"
                   name="domain"
+                  aria-label="Domain"
                   className="bg-surface border border-line text-bone px-4 py-3 rounded-sm text-[14px] focus:outline-none focus:border-venom transition-colors"
                 >
                   {domains.map((d) => <option key={d}>{d}</option>)}

@@ -34,7 +34,7 @@ export default function SystemSection() {
             <div key={s.label} className="flex gap-4">
               <span className="text-venom font-mono text-xl leading-none mt-1 flex-shrink-0">→</span>
               <div>
-                <h4 className="text-bone font-bold uppercase tracking-tight text-[15px] mb-1">{s.label}</h4>
+                <h3 className="text-bone font-bold uppercase tracking-tight text-[15px] mb-1">{s.label}</h3>
                 <p className="text-bone-dim text-[14px] leading-relaxed">{s.body}</p>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function SystemSection() {
               <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-venom border border-venom/40 inline-block px-2 py-0.5 mb-5">
                 {c.tag}
               </div>
-              <h3 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-3">{c.title}</h3>
+              <h4 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-3">{c.title}</h4>
               <p className="text-bone-dim text-[15px] leading-relaxed">{c.body}</p>
             </div>
           ))}
