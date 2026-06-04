@@ -1,7 +1,6 @@
 export default function HeroSection() {
   return (
     <header className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      {/* Video background */}
       <video
         className="absolute inset-0 w-full h-full object-cover object-right z-0"
         autoPlay
@@ -14,7 +13,6 @@ export default function HeroSection() {
         <source src="/video/hero_loop.mp4" type="video/mp4" />
       </video>
 
-      {/* Scrim */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
@@ -23,7 +21,6 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Chess-grid overlay */}
       <div
         className="absolute inset-0 z-10 pointer-events-none opacity-50"
         style={{
@@ -34,11 +31,10 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Content */}
       <div className="relative z-20 max-w-[1200px] mx-auto px-8 pt-24 pb-16">
         <div className="max-w-[600px]">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">
-            Decision-Making Under Pressure
+            Performance System
           </div>
 
           <h1 className="text-bone text-5xl md:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight leading-none mb-6">
@@ -46,8 +42,9 @@ export default function HeroSection() {
           </h1>
 
           <p className="text-bone-dim text-lg leading-relaxed max-w-[480px] mb-10">
-            Your decision-making is no longer something you&apos;re stuck with — it can be trained.
-            Personal, measurable, proven at the highest level.
+            Poison Pawn is a performance system that trains how you make decisions. Using chess as
+            the training tool, every decision is tracked and every pattern is measured — so you know
+            exactly how you think, where you&apos;re sharp, and where you break down.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -55,13 +52,13 @@ export default function HeroSection() {
               href="#apply"
               className="inline-block bg-venom text-black font-semibold text-sm tracking-[0.08em] uppercase px-7 py-4 rounded-sm hover:bg-gold-bright transition-colors duration-200"
             >
-              Request a Briefing
+              Apply For Training
             </a>
             <a
-              href="#shift"
+              href="#how"
               className="inline-block border border-line-strong text-bone text-sm tracking-[0.08em] uppercase px-7 py-4 rounded-sm hover:border-bone-dim transition-colors duration-200"
             >
-              See the Method
+              Explore the System
             </a>
           </div>
         </div>

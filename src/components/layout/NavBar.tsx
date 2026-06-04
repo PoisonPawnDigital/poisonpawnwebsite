@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 
 const links = [
-  { href: '#shift', label: 'The Method' },
-  { href: '#system', label: 'The System' },
-  { href: '#proof', label: 'Proof' },
+  { href: '#how', label: 'How It Works' },
+  { href: '#proof', label: 'Case Studies' },
+  { href: '#apply', label: 'Bring It To Your Team' },
   { href: '#media', label: 'Media' },
   { href: '#founder', label: 'Founder' },
 ]
@@ -44,7 +44,7 @@ export default function NavBar() {
           <a
             key={href}
             href={href}
-            className="hidden md:block text-bone-dim text-[13px] tracking-[0.04em] hover:text-bone transition-colors duration-250"
+            className="hidden lg:block text-bone-dim text-[13px] tracking-[0.04em] hover:text-bone transition-colors duration-250"
           >
             {label}
           </a>
@@ -53,7 +53,7 @@ export default function NavBar() {
           href="#apply"
           className="border border-line-strong px-[18px] py-[9px] rounded-sm text-[13px] tracking-[0.04em] text-bone hover:bg-venom hover:text-black hover:border-venom transition-all duration-300"
         >
-          Inquire
+          Apply For Training
         </a>
       </div>
     </nav>

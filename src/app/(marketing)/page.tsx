@@ -1,4 +1,5 @@
 import HeroSection from '@/components/sections/HeroSection'
+import TrustSection from '@/components/sections/TrustSection'
 import ShiftSection from '@/components/sections/ShiftSection'
 import MethodSection from '@/components/sections/MethodSection'
 import SystemSection from '@/components/sections/SystemSection'
@@ -7,6 +8,7 @@ import MetricsSection from '@/components/sections/MetricsSection'
 import ScienceSection from '@/components/sections/ScienceSection'
 import AudienceSection from '@/components/sections/AudienceSection'
 import ProofSection from '@/components/sections/ProofSection'
+import PressSection from '@/components/sections/PressSection'
 import MediaSection from '@/components/sections/MediaSection'
 import FounderSection from '@/components/sections/FounderSection'
 import DefinitionSection from '@/components/sections/DefinitionSection'
@@ -18,6 +20,7 @@ export default function HomePage() {
   return (
     <main>
       <HeroSection />
+      <TrustSection />
       <ShiftSection />
       <MethodSection />
       <SystemSection />
@@ -26,6 +29,7 @@ export default function HomePage() {
       <ScienceSection />
       <AudienceSection />
       <ProofSection />
+      <PressSection />
       <MediaSection />
       <FounderSection />
       <DefinitionSection />

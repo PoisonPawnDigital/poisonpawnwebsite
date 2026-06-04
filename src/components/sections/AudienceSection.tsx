@@ -1,51 +1,55 @@
-const arenas = [
-  { k: '/ ELITE ATHLETICS', title: 'Athletes & Teams', body: 'From the quarterback reading a defense to the Olympian managing the final, we train the split-second judgment that separates the great from the best.' },
-  { k: '/ FINANCE', title: 'Traders & Funds', body: 'For desks where composure, risk calibration and recovery after a loss decide the P&L, we build decision discipline that holds under volatility.' },
-  { k: '/ MEDICINE', title: 'Surgeons & Clinicians', body: 'Where a call under pressure carries a life, we train the composure, pattern recognition and clarity that hold when the margin for error is zero.' },
-  { k: '/ LEADERSHIP', title: 'Executives & Founders', body: 'For leaders making high-consequence calls with incomplete information, we sharpen strategic foresight and stability when the room is watching.' },
-  { k: '/ TACTICAL', title: 'Military & First Responders', body: 'Where decisions carry the highest stakes of all, we train threat assessment, tempo and clarity when there is no time to think twice.' },
-  { k: '/ EDUCATION', title: 'Educators & Institutions', body: 'Decision-making can be taught. We bring the framework into institutions as a discipline in its own right — training the next generation to think clearly under pressure.' },
+const conditions = [
+  {
+    title: 'The decisions you make affect other people.',
+    body: "Whether you lead a team, manage an organization, or operate in environments where your call determines the outcome for others — the weight of that responsibility is real. This system was built for people who carry it, and for the organizations they lead.",
+  },
+  {
+    title: 'The margin between your best and worst decision is significant.',
+    body: "At the highest level, the difference between a good decision and a bad one isn't small. It changes outcomes. It changes careers. It changes the trajectory of entire organizations. If that margin matters to you and your team, training it should too.",
+  },
+  {
+    title: 'You have never had a system built specifically to train this.',
+    body: "Every other system trains what you and your team do. Your physical preparation, your technical skills, your processes. This is the missing one — built specifically to train how you and everyone around you decides.",
+  },
 ]
 
 export default function AudienceSection() {
   return (
     <section id="who" className="py-[120px] bg-obsidian">
       <div className="max-w-[1200px] mx-auto px-8">
-        <div className="reveal mb-16 max-w-2xl">
+        <div className="reveal mb-16 max-w-xl">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
-            One framework · Every arena
+            Who This Is For
           </div>
-          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
-            A framework for any decision that matters.
+          <h2 className="text-bone text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none">
+            This is for you if.
           </h2>
-          <p className="text-bone-dim text-[16px] leading-relaxed">
-            Poison Pawn isn&apos;t built for one profession. It&apos;s built for the moment of
-            decision — and that moment looks the same whether you&apos;re reading a defense, pricing
-            risk, calling a play in an operating room, or leading a room that&apos;s watching you.
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line">
-          {arenas.map((a, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-line">
+          {conditions.map((c, i) => (
             <div
-              key={a.k}
-              className="reveal bg-obsidian p-8"
-              data-d={(i % 4) + 1}
+              key={i}
+              className="reveal bg-obsidian p-12 relative"
+              data-d={i + 1}
             >
-              <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-venom mb-4">
-                {a.k}
-              </div>
-              <h3 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-3">
-                {a.title}
+              <div className="absolute top-0 left-0 right-0 h-0.5 bg-venom" />
+              <h3 className="text-bone text-[22px] font-extrabold uppercase tracking-tight leading-tight mb-6">
+                {c.title}
               </h3>
-              <p className="text-bone-dim text-[14px] leading-relaxed">{a.body}</p>
+              <p className="text-bone-dim text-[14px] leading-[1.75]">{c.body}</p>
             </div>
           ))}
         </div>
 
-        <p className="reveal mt-12 text-bone-dim text-[16px] italic">
-          And anywhere else the next decision carries real weight.
-        </p>
+        <div className="reveal mt-16 text-center">
+          <a
+            href="#apply"
+            className="inline-block border border-venom text-venom text-[13px] font-semibold tracking-[0.1em] uppercase px-8 py-4 rounded-sm hover:bg-venom hover:text-black transition-all duration-200"
+          >
+            Apply For Training →
+          </a>
+        </div>
       </div>
     </section>
   )

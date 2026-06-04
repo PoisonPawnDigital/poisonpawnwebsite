@@ -67,8 +67,8 @@ export default function Footer() {
           <span className="text-pp-muted text-[12px] tracking-[0.04em]">
             © 2026 Poison Pawn. All rights reserved.
           </span>
-          <span className="text-pp-muted text-[12px] tracking-[0.04em]">
-            Train how you decide.
+          <span className="text-pp-muted text-[12px] tracking-[0.04em] font-mono">
+            #PlayerNotAPiece
           </span>
         </div>
       </div>
