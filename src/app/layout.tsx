@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Public_Sans, JetBrains_Mono } from "next/font/google";
+import NavBar from "@/components/layout/NavBar";
+import Footer from "@/components/layout/Footer";
+import RevealWrapper from "@/components/layout/RevealWrapper";
 import "./globals.css";
 
 const publicSans = Public_Sans({
@@ -42,7 +45,12 @@ export default function RootLayout({
       lang="en"
       className={`${publicSans.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <NavBar />
+        {children}
+        <Footer />
+        <RevealWrapper />
+      </body>
     </html>
   );
 }

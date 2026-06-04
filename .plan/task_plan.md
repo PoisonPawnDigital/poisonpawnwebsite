@@ -19,9 +19,9 @@ Port the Poison Pawn marketing site from a single self-contained HTML file into 
 - [x] 1.9: Build out `src/app/globals.css` — `@theme inline` block mapping all Poison Pawn CSS vars (obsidian, bone, venom/gold, crimson, green) into Tailwind tokens, same pattern as dashboard
 
 ## Phase 2: Shared Components
-- [ ] 2.1: `components/Nav.tsx` — fixed nav, scroll-state (`scrolled` class), mobile hide links below 860px (`"use client"`)
-- [ ] 2.2: `components/Footer.tsx` — static footer with links and copyright
-- [ ] 2.3: `components/RevealWrapper.tsx` — IntersectionObserver reveal animation (`"use client"`, wraps any child with `.reveal` behaviour)
+- [x] 2.1: `components/layout/NavBar.tsx` — fixed nav, scroll-state, mobile hide links below md (`"use client"`) — verified ✓
+- [x] 2.2: `components/layout/Footer.tsx` — static footer with links and copyright — verified ✓
+- [x] 2.3: `components/layout/RevealWrapper.tsx` — IntersectionObserver reveal animation — verified ✓
 - [ ] 2.4: `components/EyebrowLabel.tsx` — reusable mono-font eyebrow tag
 - [ ] 2.5: `components/SectionHead.tsx` — eyebrow + h2 + optional p pattern used across every section
 
