@@ -1,20 +1,37 @@
+import HeroSection from '@/components/sections/HeroSection'
+import ShiftSection from '@/components/sections/ShiftSection'
+import MethodSection from '@/components/sections/MethodSection'
+import SystemSection from '@/components/sections/SystemSection'
+import SetSection from '@/components/sections/SetSection'
+import MetricsSection from '@/components/sections/MetricsSection'
+import ScienceSection from '@/components/sections/ScienceSection'
+import AudienceSection from '@/components/sections/AudienceSection'
+import ProofSection from '@/components/sections/ProofSection'
+import MediaSection from '@/components/sections/MediaSection'
+import FounderSection from '@/components/sections/FounderSection'
+import DefinitionSection from '@/components/sections/DefinitionSection'
+import CreedSection from '@/components/sections/CreedSection'
+import HowSection from '@/components/sections/HowSection'
+import ApplySection from '@/components/sections/ApplySection'
+
 export default function HomePage() {
   return (
     <main>
-      {/* Placeholder — hero and all sections coming in Phase 3 */}
-      <div className="min-h-screen bg-obsidian flex flex-col items-center justify-center gap-4 pt-24">
-        <p className="font-mono text-venom text-xs tracking-[0.3em] uppercase">
-          // Phase 2 — Nav &amp; Footer
-        </p>
-        <h1 className="text-bone text-4xl font-extrabold uppercase tracking-tight">
-          Poison Pawn
-        </h1>
-        <p className="text-bone-dim text-sm tracking-wide max-w-sm text-center">
-          Decision-Making Under Pressure
-        </p>
-      </div>
-      {/* Extra height to test nav scroll state */}
-      <div className="h-[200vh] bg-surface" />
+      <HeroSection />
+      <ShiftSection />
+      <MethodSection />
+      <SystemSection />
+      <SetSection />
+      <MetricsSection />
+      <ScienceSection />
+      <AudienceSection />
+      <ProofSection />
+      <MediaSection />
+      <FounderSection />
+      <DefinitionSection />
+      <CreedSection />
+      <HowSection />
+      <ApplySection />
     </main>
-  );
+  )
 }
