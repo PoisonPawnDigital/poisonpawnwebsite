@@ -1,3 +1,5 @@
+import { ArrowRight } from 'lucide-react'
+
 const loopSteps = [
   { label: 'Assess', body: 'We profile how you decide today — speed, stability, composure, consistency.' },
   { label: 'Prescribe', body: 'The platform builds a program for your personality and decision style.' },
@@ -32,7 +34,7 @@ export default function SystemSection() {
         <div className="reveal grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {loopSteps.map((s) => (
             <div key={s.label} className="flex gap-4">
-              <span className="text-venom font-mono text-xl leading-none mt-1 flex-shrink-0">→</span>
+              <ArrowRight className="text-venom w-4 h-4 mt-0.5 flex-shrink-0" />
               <div>
                 <h3 className="text-bone font-bold uppercase tracking-tight text-[15px] mb-1">{s.label}</h3>
                 <p className="text-bone-dim text-[14px] leading-relaxed">{s.body}</p>

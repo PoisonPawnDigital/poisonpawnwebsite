@@ -1,3 +1,5 @@
+import { ChevronDown } from 'lucide-react'
+
 export default function HeroSection() {
   return (
     <header className="relative min-h-screen flex items-center overflow-hidden bg-black">
@@ -13,6 +15,7 @@ export default function HeroSection() {
         <source src="/video/hero_loop.mp4" type="video/mp4" />
       </video>
 
+      {/* Main scrim */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
@@ -21,6 +24,7 @@ export default function HeroSection() {
         }}
       />
 
+      {/* Chess grid overlay */}
       <div
         className="absolute inset-0 z-10 pointer-events-none opacity-50"
         style={{
@@ -31,13 +35,20 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-20 max-w-[1200px] mx-auto px-5 sm:px-8 pt-24 pb-16">
+      {/* Bottom fade — hero blends gracefully into next section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-40 z-10 pointer-events-none"
+        style={{ background: 'linear-gradient(to top, #000 0%, rgba(0,0,0,0.6) 50%, transparent 100%)' }}
+      />
+
+      {/* Content */}
+      <div className="relative z-20 max-w-[1200px] mx-auto px-5 sm:px-8 pt-24 pb-32">
         <div className="max-w-[600px]">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">
             Performance System
           </div>
 
-          <h1 className="text-bone text-4xl sm:text-5xl lg:text-6xl lg:text-7xl font-extrabold uppercase tracking-tight leading-none mb-6">
+          <h1 className="text-bone text-4xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight leading-none mb-6">
             Train How<br />You Decide.
           </h1>
 
@@ -62,6 +73,12 @@ export default function HeroSection() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 opacity-40">
+        <span className="font-mono text-[9px] tracking-[0.24em] uppercase text-bone">Scroll</span>
+        <ChevronDown className="w-4 h-4 text-bone animate-bounce" />
       </div>
     </header>
   )

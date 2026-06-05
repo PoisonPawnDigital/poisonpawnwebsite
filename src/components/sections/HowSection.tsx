@@ -24,23 +24,6 @@ export default function HowSection() {
   return (
     <section id="how" className="bg-obsidian">
 
-      {/* Hero */}
-      <div className="py-16 md:py-20 lg:py-[120px] border-b border-line">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="reveal max-w-3xl">
-            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
-              The System
-            </div>
-            <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-6">
-              Performance breaks down when decisions do.
-            </h2>
-            <p className="text-bone-dim text-[16px] leading-relaxed">
-              Poison Pawn was built to solve the one problem every high-performance organization has
-              — but no one has ever trained for. Until now.
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Problem */}
       <div className="py-[100px] border-b border-line bg-surface">
