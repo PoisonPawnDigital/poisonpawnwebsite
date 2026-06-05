@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 28" width="100" height="28">
-  <text x="0" y="21" font-family="system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="20" letter-spacing="2" fill="#000">NFLPA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.5 22.0" width="71" height="22">
+  <g fill="#000" transform="translate(2,2)">
+  <path transform="matrix(0.018,0,0,-0.018,0,18)" d="M69 714V0H216V478H218L515 0H672V714H525V235H523L225 714Z"/>
+  <path transform="matrix(0.018,0,0,-0.018,14.838,18)" d="M69 714V0H226V295H525V417H226V582H571V714Z"/>
+  <path transform="matrix(0.018,0,0,-0.018,27.012,18)" d="M69 714V0H574V132H226V714Z"/>
+  <path transform="matrix(0.018,0,0,-0.018,39.186,18)" d="M226 378V592H348Q375 592 400.0 588.0Q425 584 444.0 572.5Q463 561 474.5 540.0Q486 519 486 485Q486 451 474.5 430.0Q463 409 444.0 397.5Q425 386 400.0 382.0Q375 378 348 378ZM69 714V0H226V256H391Q458 256 505.0 275.5Q552 295 581.5 327.0Q611 359 624.5 400.5Q638 442 638 485Q638 529 624.5 570.0Q611 611 581.5 643.0Q552 675 505.0 694.5Q458 714 391 714Z"/>
+  <path transform="matrix(0.018,0,0,-0.018,52.692,18)" d="M249 276 342 538H344L434 276ZM264 714 -6 0H152L208 159H475L529 0H692L425 714Z"/>
+  </g>
 </svg>

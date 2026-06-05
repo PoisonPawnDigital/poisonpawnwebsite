@@ -3,13 +3,13 @@ import Image from 'next/image'
 const clients = [
   { name: 'Porsche',               src: '/logos/porsche.svg',               width: 4500, height: 300 },
   { name: 'YPO',                   src: '/logos/ypo.svg',                   width:  360, height: 160 },
-  { name: 'Panda Restaurant Group',src: '/logos/panda-restaurant-group.svg',width:  228, height:  28 },
+  { name: 'Panda Restaurant Group',src: '/logos/panda-restaurant-group.svg',width:  191, height:  15 },
   { name: 'UCLA',                  src: '/logos/ucla.svg',                  width:  250, height: 123 },
   { name: 'Michigan State',        src: '/logos/michigan-state.svg',        width:  309, height: 359 },
   { name: 'Toronto Blue Jays',     src: '/logos/toronto-blue-jays.svg',     width:  311, height:  30 },
   { name: 'USA Swimming',          src: '/logos/usa-swimming.svg',          width:  184, height: 150 },
   { name: 'NY Giants',             src: '/logos/ny-giants.svg',             width:  193, height: 150 },
-  { name: 'NFLPA',                 src: '/logos/nflpa.svg',                 width:  100, height:  28 },
+  { name: 'NFLPA',                 src: '/logos/nflpa.svg',                 width:   71, height:  22 },
 ]
 
 export default function TrustSection() {
