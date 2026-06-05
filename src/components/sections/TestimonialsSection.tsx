@@ -26,17 +26,17 @@ export default function TestimonialsSection() {
           </div>
         </div>
 
-        {/* Video placeholder */}
+        {/* Cameron Diaz video */}
         <div className="reveal mb-16">
           <div className="max-w-2xl mx-auto">
-            <div className="aspect-video bg-surface-2 border border-line rounded-sm flex items-center justify-center">
-              <div className="text-center">
-                <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">
-                  Placeholder
-                </div>
-                <p className="text-bone-dim text-[13px]">Cameron Diaz — Training Video</p>
-                <p className="text-pp-muted text-[11px] mt-1">Asset needed from client</p>
-              </div>
+            <div className="aspect-video bg-black rounded-sm overflow-hidden">
+              {/* Video hosted locally for dev. For production: upload to Vimeo/Cloudflare Stream and swap for iframe embed */}
+              <video
+                src="/video/cameron-diaz.mp4"
+                controls
+                className="w-full h-full object-cover"
+                poster="/images/player-not-a-piece-neon.jpg"
+              />
             </div>
             <div className="text-center mt-4">
               <div className="text-bone text-[15px] font-semibold">Cameron Diaz</div>

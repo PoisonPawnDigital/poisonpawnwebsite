@@ -49,6 +49,7 @@ next-env.d.ts
 /poison-pawn-SMV11handoff 5.29.26 Website/
 /poison-pawn-handoff font update/
 /v3 JOEY 620pm poison-pawn-site-handoff/
+/Poison-Pawn-Features/
 poison-pawn-site*.html
 JOEY*.html
 *.zip
@@ -57,6 +58,9 @@ featured-quarterback-mind.html
 /STATS*.png
 /CRYSTAL_SET_DUAL_PIECES_1.mp4
 /CRYSTAL_SET_DUAL_PIECES_LOOP.mp4
+# Large video assets — host on CDN/Vimeo for production, reference locally only
+/public/video/cameron-diaz.mp4
+CAMERON*.mp4
 *.HEIC
 *.mov
 /.plan/
