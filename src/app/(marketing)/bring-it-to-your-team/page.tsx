@@ -223,11 +223,13 @@ export default function BringItToYourTeamPage() {
               packages — every organization is different, and pricing reflects that.
             </p>
           </div>
-          {/* Calendly placeholder */}
-          <div className="reveal border border-line bg-surface-2 rounded-sm p-10 max-w-xl">
-            <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-3">Placeholder</div>
-            <p className="text-bone-dim text-[14px]">Calendly scheduling embed</p>
-            <p className="text-pp-muted text-[12px] mt-1">URL needed from client</p>
+          <div className="reveal">
+            <a
+              href="/contact"
+              className="inline-block bg-venom text-black font-semibold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-sm hover:bg-gold-bright transition-colors duration-200"
+            >
+              Apply For Training →
+            </a>
           </div>
         </div>
       </section>
