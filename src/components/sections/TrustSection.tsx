@@ -1,10 +1,18 @@
+import Image from 'next/image'
+
 const clients = [
-  'Porsche', 'YPO', 'Panda Restaurant Group', 'UCLA', 'Michigan State',
-  'Toronto Blue Jays', 'USA Swimming', 'NY Giants', 'NFLPA',
+  { name: 'Porsche',               src: '/logos/porsche.svg',               width: 420 },
+  { name: 'YPO',                   src: '/logos/ypo.svg',                   width:  63 },
+  { name: 'Panda Restaurant Group',src: '/logos/panda-restaurant-group.svg',width: 228 },
+  { name: 'UCLA',                  src: '/logos/ucla.svg',                  width:  57 },
+  { name: 'Michigan State',        src: '/logos/michigan-state.svg',        width:  24 },
+  { name: 'Toronto Blue Jays',     src: '/logos/toronto-blue-jays.svg',     width: 290 },
+  { name: 'USA Swimming',          src: '/logos/usa-swimming.svg',          width:  34 },
+  { name: 'NY Giants',             src: '/logos/ny-giants.svg',             width:  36 },
+  { name: 'NFLPA',                 src: '/logos/nflpa.svg',                 width: 100 },
 ]
 
 export default function TrustSection() {
-  // Double for seamless marquee loop
   const all = [...clients, ...clients]
 
   return (
@@ -15,14 +23,17 @@ export default function TrustSection() {
         </span>
       </div>
       <div className="relative">
-        <div className="flex gap-12 animate-marquee whitespace-nowrap">
-          {all.map((name, i) => (
-            <span
+        <div className="flex items-center gap-16 animate-marquee whitespace-nowrap">
+          {all.map((client, i) => (
+            <Image
               key={i}
-              className="font-sans text-[13px] font-semibold tracking-[0.16em] uppercase text-bone-dim flex-shrink-0"
-            >
-              {name}
-            </span>
+              src={client.src}
+              alt={client.name}
+              width={client.width}
+              height={28}
+              className="h-7 w-auto flex-shrink-0 brightness-0 invert opacity-60 transition-opacity hover:opacity-90"
+              unoptimized
+            />
           ))}
         </div>
       </div>
@@ -32,7 +43,7 @@ export default function TrustSection() {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 28s linear infinite;
+          animation: marquee 32s linear infinite;
         }
       `}</style>
     </div>

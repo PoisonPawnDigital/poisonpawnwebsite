@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 160">
+  <!-- Large triangle with 10 upward-triangle holes punched through it (evenodd) -->
+  <!-- The dark navy areas (outer border + 6 downward triangles) remain opaque -->
+  <!-- The 10 white upward triangles become transparent cutouts -->
+  <path fill-rule="evenodd" fill="#000" d="
+    M 80,2 L 2,139 L 158,139 Z
+    M 80,2 L 60.5,36.25 L 99.5,36.25 Z
+    M 60.5,36.25 L 41,70.5 L 80,70.5 Z
+    M 99.5,36.25 L 80,70.5 L 119,70.5 Z
+    M 41,70.5 L 21.5,104.75 L 60.5,104.75 Z
+    M 80,70.5 L 60.5,104.75 L 99.5,104.75 Z
+    M 119,70.5 L 99.5,104.75 L 138.5,104.75 Z
+    M 21.5,104.75 L 2,139 L 41,139 Z
+    M 60.5,104.75 L 41,139 L 80,139 Z
+    M 99.5,104.75 L 80,139 L 119,139 Z
+    M 138.5,104.75 L 119,139 L 158,139 Z
+  "/>
+  <!-- YPO in serif to the right, vertically centered on the triangle -->
+  <text x="176" y="101" font-family="Georgia,'Times New Roman',Times,serif" font-size="86" fill="#000">YPO</text>
+</svg>
