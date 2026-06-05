@@ -42,14 +42,10 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="flex flex-col md:flex-row justify-between gap-12 pb-12 border-b border-line">
           <div className="max-w-xs">
-            <div className="flex items-center gap-3 mb-4">
-              <span className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
-                <span className="absolute inset-0 border border-venom" style={{ right: '5px', bottom: '5px' }} />
-                <span className="absolute inset-0 border border-venom" style={{ top: '5px', left: '5px' }} />
-              </span>
-              <span className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone">
+            <div className="mb-4">
+              <a href="/" className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone hover:text-venom transition-colors duration-200">
                 Poison&nbsp;Pawn
-              </span>
+              </a>
             </div>
             <p className="text-bone-dim text-[13px] leading-relaxed">
               A proprietary system that trains how you decide. Personalized. Game-theoretic. Measurable.

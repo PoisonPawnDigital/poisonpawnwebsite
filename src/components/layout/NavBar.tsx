@@ -3,12 +3,12 @@
 import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 
+// Links ordered top → bottom as they appear on the page
 const links = [
-  { href: '#how', label: 'How It Works' },
-  { href: '#proof', label: 'Case Studies' },
-  { href: '#apply', label: 'Bring It To Your Team' },
-  { href: '#media', label: 'Media' },
-  { href: '#founder', label: 'Founder' },
+  { href: '#how', label: 'How It Works' },      // ~section 6
+  { href: '#proof', label: 'Case Studies' },    // ~section 11
+  { href: '#media', label: 'Media' },           // ~section 13
+  { href: '#founder', label: 'Founder' },       // ~section 14
 ]
 
 export default function NavBar() {
@@ -29,15 +29,9 @@ export default function NavBar() {
           : 'py-5 border-b border-transparent',
       )}
     >
-      <div className="flex items-center gap-3">
-        <span className="relative w-[18px] h-[18px] flex-shrink-0" aria-hidden="true">
-          <span className="absolute inset-0 border border-venom" style={{ right: '5px', bottom: '5px' }} />
-          <span className="absolute inset-0 border border-venom" style={{ top: '5px', left: '5px' }} />
-        </span>
-        <span className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone">
-          Poison&nbsp;Pawn
-        </span>
-      </div>
+      <a href="/" className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone hover:text-venom transition-colors duration-200">
+        Poison&nbsp;Pawn
+      </a>
 
       <div className="flex items-center gap-8">
         {links.map(({ href, label }) => (

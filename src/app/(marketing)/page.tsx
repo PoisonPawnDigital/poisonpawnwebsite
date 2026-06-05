@@ -3,6 +3,7 @@ import TrustSection from '@/components/sections/TrustSection'
 import ShiftSection from '@/components/sections/ShiftSection'
 import MethodSection from '@/components/sections/MethodSection'
 import SystemSection from '@/components/sections/SystemSection'
+import HowSection from '@/components/sections/HowSection'
 import SetSection from '@/components/sections/SetSection'
 import MetricsSection from '@/components/sections/MetricsSection'
 import ScienceSection from '@/components/sections/ScienceSection'
@@ -13,7 +14,6 @@ import MediaSection from '@/components/sections/MediaSection'
 import FounderSection from '@/components/sections/FounderSection'
 import DefinitionSection from '@/components/sections/DefinitionSection'
 import CreedSection from '@/components/sections/CreedSection'
-import HowSection from '@/components/sections/HowSection'
 import ApplySection from '@/components/sections/ApplySection'
 
 export default function HomePage() {
@@ -24,6 +24,7 @@ export default function HomePage() {
       <ShiftSection />
       <MethodSection />
       <SystemSection />
+      <HowSection />       {/* moved up — How It Works follows naturally after The System */}
       <SetSection />
       <MetricsSection />
       <ScienceSection />
@@ -34,7 +35,6 @@ export default function HomePage() {
       <FounderSection />
       <DefinitionSection />
       <CreedSection />
-      <HowSection />
       <ApplySection />
     </main>
   )

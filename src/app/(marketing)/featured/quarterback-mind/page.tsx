@@ -48,14 +48,8 @@ export default function QuarterbackMindPage() {
 
         {/* Topbar */}
         <div className="flex items-center justify-between py-8 border-b border-line mb-12">
-          <Link href="/" className="flex items-center gap-2 group">
-            <span className="relative w-[16px] h-[16px] flex-shrink-0" aria-hidden="true">
-              <span className="absolute inset-0 border border-venom" style={{ right: '4px', bottom: '4px' }} />
-              <span className="absolute inset-0 border border-venom" style={{ top: '4px', left: '4px' }} />
-            </span>
-            <span className="font-sans text-[13px] font-semibold tracking-[0.22em] uppercase text-bone group-hover:text-venom transition-colors">
-              Poison&nbsp;Pawn
-            </span>
+          <Link href="/" className="font-sans text-[13px] font-semibold tracking-[0.22em] uppercase text-bone hover:text-venom transition-colors">
+            Poison Pawn
           </Link>
           <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-pp-muted">
             Featured — World Chess Hall of Fame
