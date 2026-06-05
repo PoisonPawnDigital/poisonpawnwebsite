@@ -1,18 +1,20 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 
-// Links ordered top → bottom as they appear on the page
 const links = [
-  { href: '#how', label: 'How It Works' },      // ~section 6
-  { href: '#proof', label: 'Case Studies' },    // ~section 11
-  { href: '#media', label: 'Media' },           // ~section 13
-  { href: '#founder', label: 'Founder' },       // ~section 14
+  { href: '/how-it-works',          label: 'How It Works' },
+  { href: '/case-studies',          label: 'Case Studies' },
+  { href: '/bring-it-to-your-team', label: 'Bring It To Your Team' },
+  { href: '/media',                 label: 'Media' },
+  { href: '/founder',               label: 'Founder' },
 ]
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 40)
@@ -33,18 +35,21 @@ export default function NavBar() {
         Poison&nbsp;Pawn
       </a>
 
-      <div className="flex items-center gap-8">
+      <div className="flex items-center gap-6">
         {links.map(({ href, label }) => (
           <a
             key={href}
             href={href}
-            className="hidden lg:block text-bone-dim text-[13px] tracking-[0.04em] hover:text-bone transition-colors duration-250 py-3 px-1"
+            className={cn(
+              'hidden lg:block text-[13px] tracking-[0.04em] transition-colors duration-250 py-3 px-1',
+              pathname === href ? 'text-bone' : 'text-bone-dim hover:text-bone',
+            )}
           >
             {label}
           </a>
         ))}
         <a
-          href="#apply"
+          href="/contact"
           className="whitespace-nowrap border border-line-strong px-3 py-2 md:px-[18px] md:py-[9px] rounded-sm text-[12px] md:text-[13px] tracking-[0.04em] text-bone hover:bg-venom hover:text-black hover:border-venom transition-all duration-300"
         >
           <span className="md:hidden">Apply</span>

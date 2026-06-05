@@ -60,13 +60,13 @@ export default function HeroSection() {
 
           <div className="flex flex-wrap gap-4">
             <a
-              href="#apply"
+              href="/contact"
               className="inline-block bg-venom text-black font-semibold text-sm tracking-[0.08em] uppercase px-7 py-4 rounded-sm hover:bg-gold-bright transition-colors duration-200"
             >
               Apply For Training
             </a>
             <a
-              href="#how"
+              href="/how-it-works"
               className="inline-block border border-line-strong text-bone text-sm tracking-[0.08em] uppercase px-7 py-4 rounded-sm hover:border-bone-dim transition-colors duration-200"
             >
               Explore the System

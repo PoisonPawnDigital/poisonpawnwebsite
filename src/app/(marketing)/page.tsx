@@ -1,41 +1,21 @@
-import HeroSection from '@/components/sections/HeroSection'
-import TrustSection from '@/components/sections/TrustSection'
-import ShiftSection from '@/components/sections/ShiftSection'
-import MethodSection from '@/components/sections/MethodSection'
-import SystemSection from '@/components/sections/SystemSection'
-import HowSection from '@/components/sections/HowSection'
-import SetSection from '@/components/sections/SetSection'
-import MetricsSection from '@/components/sections/MetricsSection'
-import ScienceSection from '@/components/sections/ScienceSection'
-import AudienceSection from '@/components/sections/AudienceSection'
-import ProofSection from '@/components/sections/ProofSection'
-import PressSection from '@/components/sections/PressSection'
-import MediaSection from '@/components/sections/MediaSection'
-import FounderSection from '@/components/sections/FounderSection'
-import DefinitionSection from '@/components/sections/DefinitionSection'
-import CreedSection from '@/components/sections/CreedSection'
-import ApplySection from '@/components/sections/ApplySection'
+import HeroSection         from '@/components/sections/HeroSection'
+import TrustSection        from '@/components/sections/TrustSection'
+import HomeSystemSection   from '@/components/sections/HomeSystemSection'
+import StatsSection        from '@/components/sections/StatsSection'
+import PressSection        from '@/components/sections/PressSection'
+import TestimonialsSection from '@/components/sections/TestimonialsSection'
+import HomeCTASection      from '@/components/sections/HomeCTASection'
 
 export default function HomePage() {
   return (
     <main>
       <HeroSection />
       <TrustSection />
-      <ShiftSection />
-      <MethodSection />
-      <SystemSection />
-      <HowSection />       {/* moved up — How It Works follows naturally after The System */}
-      <SetSection />
-      <MetricsSection />
-      <ScienceSection />
-      <AudienceSection />
-      <ProofSection />
+      <HomeSystemSection />
+      <StatsSection />
       <PressSection />
-      <MediaSection />
-      <FounderSection />
-      <DefinitionSection />
-      <CreedSection />
-      <ApplySection />
+      <TestimonialsSection />
+      <HomeCTASection />
     </main>
   )
 }

@@ -1,15 +1,56 @@
-const conditions = [
+import {
+  Trophy,
+  TrendingUp,
+  Stethoscope,
+  Briefcase,
+  Shield,
+  GraduationCap,
+} from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+
+type Arena = {
+  icon: LucideIcon
+  k: string
+  title: string
+  body: string
+}
+
+const arenas: Arena[] = [
   {
-    title: 'The decisions you make affect other people.',
-    body: "Whether you lead a team, manage an organization, or operate in environments where your call determines the outcome for others — the weight of that responsibility is real. This system was built for people who carry it, and for the organizations they lead.",
+    icon: Trophy,
+    k: '/ ELITE ATHLETICS',
+    title: 'Athletes & Teams',
+    body: 'From the quarterback reading a defense to the Olympian managing the final, we train the split-second judgment that separates the great from the best.',
   },
   {
-    title: 'The margin between your best and worst decision is significant.',
-    body: "At the highest level, the difference between a good decision and a bad one isn't small. It changes outcomes. It changes careers. It changes the trajectory of entire organizations. If that margin matters to you and your team, training it should too.",
+    icon: TrendingUp,
+    k: '/ FINANCE',
+    title: 'Traders & Funds',
+    body: 'For desks where composure, risk calibration and recovery after a loss decide the P&L, we build decision discipline that holds under volatility.',
   },
   {
-    title: 'You have never had a system built specifically to train this.',
-    body: "Every other system trains what you and your team do. Your physical preparation, your technical skills, your processes. This is the missing one — built specifically to train how you and everyone around you decides.",
+    icon: Stethoscope,
+    k: '/ MEDICINE',
+    title: 'Surgeons & Clinicians',
+    body: 'Where a call under pressure carries a life, we train the composure, pattern recognition and clarity that hold when the margin for error is zero.',
+  },
+  {
+    icon: Briefcase,
+    k: '/ LEADERSHIP',
+    title: 'Executives & Founders',
+    body: 'For leaders making high-consequence calls with incomplete information, we sharpen strategic foresight and stability when the room is watching.',
+  },
+  {
+    icon: Shield,
+    k: '/ TACTICAL',
+    title: 'Military & First Responders',
+    body: 'Where decisions carry the highest stakes of all, we train threat assessment, tempo and clarity when there is no time to think twice.',
+  },
+  {
+    icon: GraduationCap,
+    k: '/ EDUCATION',
+    title: 'Educators & Institutions',
+    body: 'Decision-making can be taught. We bring the framework into institutions as a discipline in its own right — training the next generation to think clearly under pressure.',
   },
 ]
 
@@ -19,37 +60,38 @@ export default function AudienceSection() {
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="reveal mb-16 max-w-xl">
           <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
-            Who This Is For
+            One framework · Every arena
           </div>
           <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
-            This is for you if.
+            A framework for any decision that matters.
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-line overflow-hidden rounded-sm">
-          {conditions.map((c, i) => (
-            <div
-              key={i}
-              className="reveal bg-obsidian p-12 relative"
-              data-d={i + 1}
-            >
-              <div className="absolute top-0 left-0 right-0 h-0.5 bg-venom" />
-              <h3 className="text-bone text-[22px] font-extrabold uppercase tracking-tight leading-tight mb-6">
-                {c.title}
-              </h3>
-              <p className="text-bone-dim text-[14px] leading-[1.75]">{c.body}</p>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line overflow-hidden rounded-sm">
+          {arenas.map((a, i) => {
+            const Icon = a.icon
+            return (
+              <div
+                key={a.k}
+                className="reveal bg-obsidian p-8 md:p-10 group hover:bg-surface transition-colors duration-300"
+                data-d={(i % 4) + 1}
+              >
+                <Icon className="w-7 h-7 text-bone-dim mb-6 group-hover:text-venom transition-colors duration-300" strokeWidth={1.25} />
+                <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-pp-muted mb-3">
+                  {a.k}
+                </div>
+                <h3 className="text-bone text-[18px] font-extrabold uppercase tracking-tight mb-3">
+                  {a.title}
+                </h3>
+                <p className="text-bone-dim text-[14px] leading-relaxed">{a.body}</p>
+              </div>
+            )
+          })}
         </div>
 
-        <div className="reveal mt-16 text-center">
-          <a
-            href="#apply"
-            className="inline-block border border-venom text-venom text-[13px] font-semibold tracking-[0.1em] uppercase px-8 py-4 rounded-sm hover:bg-venom hover:text-black transition-all duration-200"
-          >
-            Apply For Training →
-          </a>
-        </div>
+        <p className="reveal mt-10 text-bone-dim text-[15px] italic">
+          And anywhere else the next decision carries real weight.
+        </p>
       </div>
     </section>
   )
