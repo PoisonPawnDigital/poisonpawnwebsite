@@ -133,7 +133,23 @@ export default function CameronDiazPage() {
             describes: the instinct preserved, the big decisions taken slowly and on purpose.
           </p>
 
-          <div className="mt-12 p-8 border border-line bg-surface-2 rounded-sm">
+          {/* Training video — 1920×816 cinematic widescreen */}
+          <div className="my-12">
+            <div className="aspect-[40/17] bg-black rounded-sm overflow-hidden">
+              <video
+                src="/video/cameron-diaz.mp4"
+                controls
+                playsInline
+                className="w-full h-full object-contain"
+                poster="/images/player-not-a-piece-neon.jpg"
+              />
+            </div>
+            <p className="text-pp-muted text-[12px] font-mono mt-3">
+              Cameron Diaz training with Seth Makowsky · Los Angeles
+            </p>
+          </div>
+
+          <div className="p-8 border border-line bg-surface-2 rounded-sm">
             <p className="text-bone text-xl italic leading-relaxed text-center">
               &ldquo;It was never the chess. It&apos;s how you decide.&rdquo;
             </p>

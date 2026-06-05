@@ -29,12 +29,13 @@ export default function TestimonialsSection() {
         {/* Cameron Diaz video */}
         <div className="reveal mb-16">
           <div className="max-w-2xl mx-auto">
-            <div className="aspect-video bg-black rounded-sm overflow-hidden">
-              {/* Video hosted locally for dev. For production: upload to Vimeo/Cloudflare Stream and swap for iframe embed */}
+            {/* 1920×816 — cinematic widescreen (40:17). For production: upload to Vimeo and swap for iframe */}
+            <div className="aspect-[40/17] bg-black rounded-sm overflow-hidden">
               <video
                 src="/video/cameron-diaz.mp4"
                 controls
-                className="w-full h-full object-cover"
+                playsInline
+                className="w-full h-full object-contain"
                 poster="/images/player-not-a-piece-neon.jpg"
               />
             </div>
