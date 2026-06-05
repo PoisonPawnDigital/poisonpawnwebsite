@@ -101,13 +101,11 @@ export default function HowItWorksPage() {
               </p>
             </div>
             <div className="reveal" data-d="2">
-              <div className="aspect-[4/3] bg-surface border border-line rounded-sm flex items-center justify-center">
-                <div className="text-center">
-                  <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">Placeholder</div>
-                  <p className="text-bone-dim text-[13px]">Seth photo</p>
-                  <p className="text-pp-muted text-[11px] mt-1">Asset needed from client</p>
-                </div>
-              </div>
+              <img
+                src="/images/founder-at-exhibit.jpg"
+                alt="Seth Makowsky at the World Chess Hall of Fame exhibit"
+                className="w-full h-auto rounded-sm"
+              />
             </div>
           </div>
         </div>

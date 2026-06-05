@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export const metadata = { title: 'Founder — Poison Pawn' }
 
 const engagements = [
@@ -28,13 +26,10 @@ export default function FounderPage() {
 
             {/* Left — Jalen Hurts image */}
             <div className="reveal">
-              <Image
-                src="https://cdn.prod.website-files.com/6a0e74426980c14129cf2c05/6a1dc7e2bf7ec4976492d026_JALEN%2BHURTS%2BSETH%2BMAKOWSKY%2BFIELD.webp"
+              <img
+                src="/images/jalen-hurts.jpg"
                 alt="Jalen Hurts and Seth Makowsky on the field"
-                width={800}
-                height={600}
                 className="w-full h-auto"
-                unoptimized
               />
             </div>
 
@@ -97,13 +92,10 @@ export default function FounderPage() {
 
             {/* Right — Mookie Betts image (display full, not cropped) */}
             <div className="reveal" data-d="2">
-              <Image
-                src="https://cdn.prod.website-files.com/6a0e74426980c14129cf2c05/6a1dc7e7dc7c504c25f4d1c2_mookie%20image.webp"
+              <img
+                src="/images/mookie-betts.jpg"
                 alt="Mookie Betts and Seth Makowsky"
-                width={800}
-                height={600}
                 className="w-full h-auto"
-                unoptimized
               />
             </div>
 

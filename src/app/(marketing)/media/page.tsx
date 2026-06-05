@@ -146,13 +146,11 @@ export default function MediaPage() {
               </a>
             </div>
             <div className="reveal" data-d="2">
-              <div className="aspect-[4/3] bg-surface border border-line rounded-sm flex items-center justify-center">
-                <div className="text-center">
-                  <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">Placeholder</div>
-                  <p className="text-bone-dim text-[13px]">Exhibition photo</p>
-                  <p className="text-pp-muted text-[11px] mt-1">Asset needed from client</p>
-                </div>
-              </div>
+              <img
+                src="/images/wchof-exhibit-installation.jpg"
+                alt="Poison Pawn exhibit at the World Chess Hall of Fame"
+                className="w-full h-auto rounded-sm"
+              />
             </div>
           </div>
         </div>
