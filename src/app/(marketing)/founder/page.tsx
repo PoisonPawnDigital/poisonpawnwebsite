@@ -1,4 +1,4 @@
-export const metadata = { title: 'Founder — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 const engagements = [
   {
@@ -27,7 +27,7 @@ export default function FounderPage() {
             {/* Left — Jalen Hurts image */}
             <div className="reveal">
               <img
-                src="/images/jalen-hurts.jpg"
+                src="/images/jalen-hurts-makowsky.jpeg"
                 alt="Jalen Hurts and Seth Makowsky on the field"
                 className="w-full h-auto"
               />
