@@ -167,28 +167,30 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      {/* See It In Practice — Video */}
-      <section className="py-16 md:py-20 lg:py-[120px] bg-surface border-t border-line">
+      {/* See It In Practice — Case studies CTA */}
+      <section className="py-16 md:py-20 lg:py-[120px] bg-black border-t border-line">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="reveal mb-10">
-            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
-              Case Studies
+          <div className="reveal text-center max-w-2xl mx-auto">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <span className="h-px w-10 bg-line" />
+              <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-venom">
+                Case Studies
+              </span>
+              <span className="h-px w-10 bg-line" />
             </div>
-            <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
-              See It In Practice.
+            <h2 className="text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-[0.95] mb-6">
+              See It<br />In Practice.
             </h2>
-          </div>
-          <div className="reveal max-w-3xl">
-            <div className="aspect-video rounded-sm overflow-hidden">
-              <iframe
-                src="https://player.vimeo.com/video/820605783"
-                width="100%"
-                height="100%"
-                allow="autoplay; fullscreen; picture-in-picture"
-                title="Poison Pawn — How It Works"
-                className="w-full h-full"
-              />
-            </div>
+            <p className="text-bone-dim text-[16px] leading-relaxed mb-10 max-w-lg mx-auto">
+              Real organizations. Real results. See how Poison Pawn has changed the way
+              high-performance groups operate.
+            </p>
+            <a
+              href="/case-studies"
+              className="inline-block border border-venom text-venom font-mono text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-sm hover:bg-venom hover:text-black transition-colors duration-200"
+            >
+              View Case Studies
+            </a>
           </div>
         </div>
       </section>
