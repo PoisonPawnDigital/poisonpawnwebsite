@@ -2,16 +2,6 @@
 
 import { useState } from 'react'
 
-const domains = [
-  'Elite Athletics',
-  'Finance / Trading',
-  'Executive Leadership',
-  'Medicine',
-  'Military / Law Enforcement',
-  'Education',
-  'Other',
-]
-
 export default function ApplySection() {
   const [track, setTrack] = useState<'enterprise' | 'individual'>('enterprise')
   const [submitted, setSubmitted] = useState(false)
@@ -100,28 +90,6 @@ export default function ApplySection() {
                   />
                 </div>
               )}
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="apply-domain" className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom">Domain</label>
-                <select
-                  id="apply-domain"
-                  name="domain"
-                  aria-label="Domain"
-                  className="bg-surface border border-line text-bone px-4 py-3 rounded-sm text-[14px] focus:outline-none focus:border-venom transition-colors"
-                >
-                  {domains.map((d) => <option key={d}>{d}</option>)}
-                </select>
-              </div>
-              <div className="flex flex-col gap-1.5">
-                <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom">
-                  Where do decisions matter most for you?
-                </label>
-                <textarea
-                  name="goal"
-                  rows={4}
-                  placeholder="The moments, the people, and the outcomes you'd want to sharpen..."
-                  className="bg-surface border border-line text-bone placeholder:text-pp-muted px-4 py-3 rounded-sm text-[14px] focus:outline-none focus:border-venom transition-colors resize-none"
-                />
-              </div>
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                 <small className="text-pp-muted text-[12px]">
                   We&apos;ll be in touch to scope a conversation. We never share your information.
@@ -130,7 +98,7 @@ export default function ApplySection() {
                   type="submit"
                   className="flex-shrink-0 bg-venom text-black font-bold text-[13px] tracking-[0.1em] uppercase px-7 py-3.5 rounded-sm hover:bg-gold-bright transition-colors duration-200"
                 >
-                  Apply For Training →
+                  Send →
                 </button>
               </div>
             </form>

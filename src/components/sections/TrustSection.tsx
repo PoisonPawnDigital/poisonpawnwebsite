@@ -23,20 +23,25 @@ export default function TrustSection() {
         </span>
       </div>
       <div className="relative">
-        <div className="flex items-center gap-12 animate-marquee whitespace-nowrap">
+        <div className="flex items-center gap-6 animate-marquee whitespace-nowrap">
           {all.map((client, i) => (
+            // Actual full-color logos (multi-color brands can't be flattened
+            // to one color). On the dark bar they sit on a light chip so
+            // navy/dark marks stay legible; every chip is the same size.
             <div
               key={i}
-              className="relative flex-shrink-0 brightness-0 invert opacity-60 hover:opacity-90 transition-opacity"
-              style={{ width: 120, height: 36 }}
+              className="relative flex-shrink-0 flex items-center justify-center bg-bone/95 rounded-md opacity-85 hover:opacity-100 transition-opacity"
+              style={{ width: 132, height: 52 }}
             >
-              <Image
-                src={client.src}
-                alt={client.name}
-                fill
-                className="object-contain"
-                unoptimized
-              />
+              <div className="relative" style={{ width: 104, height: 32 }}>
+                <Image
+                  src={client.src}
+                  alt={client.name}
+                  fill
+                  className="object-contain"
+                  unoptimized
+                />
+              </div>
             </div>
           ))}
         </div>

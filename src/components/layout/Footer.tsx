@@ -1,30 +1,38 @@
+// Mirror the NavBar items so the footer matches the navbar (POI website
+// edits V3). NavBar: How It Works, Case Studies, Bring It To Your Team,
+// Media, Founder — plus Contact, which is footer-appropriate.
 const systemLinks = [
   { href: '/how-it-works',          label: 'How It Works' },
   { href: '/case-studies',          label: 'Case Studies' },
-  { href: '/bring-it-to-your-team', label: 'Bring' },
+  { href: '/bring-it-to-your-team', label: 'Bring It To Your Team' },
+  { href: '/media',                 label: 'Media' },
   { href: '/founder',               label: 'Founder' },
   { href: '/contact',               label: 'Contact' },
 ]
 
 const connectLinks = [
-  { href: '#', label: 'Instagram' },
-  { href: '#', label: 'Twitter / X' },
-  { href: '#', label: 'LinkedIn' },
+  { href: 'https://instagram.com/poisonpawnhq/', label: 'Instagram' },
+  { href: 'https://x.com/PoisonPawnChess',       label: 'Twitter / X' },
+  { href: 'https://linkedin.com/company/poisonpawn', label: 'LinkedIn' },
 ]
 
 function FooterLinkGroup({ title, links }: { title: string; links: { href: string; label: string }[] }) {
   return (
     <div className="flex flex-col gap-3">
       <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-venom mb-1">{title}</p>
-      {links.map(({ href, label }) => (
-        <a
-          key={label}
-          href={href}
-          className="text-bone-dim text-[13px] tracking-[0.02em] hover:text-bone transition-colors duration-200"
-        >
-          {label}
-        </a>
-      ))}
+      {links.map(({ href, label }) => {
+        const external = href.startsWith('http')
+        return (
+          <a
+            key={label}
+            href={href}
+            {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            className="text-bone-dim text-[13px] tracking-[0.02em] hover:text-bone transition-colors duration-200"
+          >
+            {label}
+          </a>
+        )
+      })}
     </div>
   )
 }

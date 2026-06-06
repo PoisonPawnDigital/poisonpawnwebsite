@@ -16,13 +16,13 @@ const sectors = [
     wide: false,
   },
   {
-    tag: '/ Elite Athletics',
+    tag: '/ Athletics',
     title: 'Athletes & Teams',
     body: 'Elite physical preparation is table stakes. What separates programs at the highest level is how they think — and how consistently that thinking holds when everything is on the line.',
     wide: false,
   },
   {
-    tag: '/ Legal & Government',
+    tag: '/ Law',
     title: 'Legal & Government',
     body: 'The courtroom, the hearing room, the negotiation table — high-stakes legal environments demand the ability to read situations fast and respond without hesitation.',
     wide: false,
@@ -222,14 +222,6 @@ export default function BringItToYourTeamPage() {
               Poison Pawn pricing is based on team size and program needs. There are no standard
               packages — every organization is different, and pricing reflects that.
             </p>
-          </div>
-          <div className="reveal">
-            <a
-              href="/contact"
-              className="inline-block bg-venom text-black font-semibold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-sm hover:bg-gold-bright transition-colors duration-200"
-            >
-              Apply For Training →
-            </a>
           </div>
         </div>
       </section>

@@ -18,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Poison Pawn — Decision-Making Under Pressure",
+  title: "POISON PAWN® | Player Not A Piece",
   description:
     "Poison Pawn trains how you think and decide — profiling your mind, then using chess to sharpen your judgment under pressure. Personal, measurable, proven at the highest level.",
   openGraph: {
