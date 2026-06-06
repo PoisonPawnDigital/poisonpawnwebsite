@@ -93,7 +93,8 @@ export default function CaseStudiesPage() {
             </p>
           </div>
 
-          <div className="reveal max-w-3xl">
+          <div className="reveal max-w-3xl border-l-2 border-venom pl-5">
+            <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">The Takeaway</div>
             <h4 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">A whole-organization transformation.</h4>
             <p className="text-bone-dim text-[15px] leading-relaxed">
               The data tells the story — decision quality improved across the roster, and twenty more
@@ -174,7 +175,8 @@ export default function CaseStudiesPage() {
             </p>
           </div>
 
-          <div className="reveal max-w-3xl">
+          <div className="reveal max-w-3xl border-l-2 border-venom pl-5">
+            <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">The Takeaway</div>
             <h4 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">From the edge of elimination to the podium.</h4>
             <p className="text-bone-dim text-[15px] leading-relaxed">
               The margin was 0.66 points. At that level, the difference between heartbreak and a
@@ -213,9 +215,9 @@ export default function CaseStudiesPage() {
             </h3>
             <p className="text-bone-dim text-[15px] leading-relaxed max-w-3xl mb-6">
               In 2019, UCLA brought in Poison Pawn with a single mandate: sharpen its players&apos;
-              decision-making under time and pressure. The first athlete in the program was a sophomore
-              quarterback in his first year as a starter. That season he completed just 59% of his
-              passes and threw 12 interceptions.
+              decision-making under time and pressure. The first athlete in the program was
+              Dorian Thompson-Robinson, a sophomore quarterback in his first year as a starter. That
+              season he completed just 59% of his passes and threw 12 interceptions.
             </p>
             <div className="flex items-center gap-6 border border-line bg-surface-2 rounded-sm p-6 max-w-sm">
               <div className="text-center">
@@ -232,6 +234,15 @@ export default function CaseStudiesPage() {
               From 59% to 69.6%. From 12 interceptions to all-time records. The data tracks exactly
               how decision-making improves when the brain is trained deliberately.
             </p>
+            <div className="mt-8 border-l-2 border-venom pl-5 max-w-3xl">
+              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">The Takeaway</div>
+              <p className="text-bone-dim text-[15px] leading-relaxed">
+                The work outlived the player. What started with Dorian Thompson-Robinson became part
+                of how UCLA develops quarterbacks — and helped the program land Dante Moore, the
+                No.&nbsp;3 quarterback in the country, who pointed to that development work as a
+                reason he chose the school.
+              </p>
+            </div>
           </div>
 
           {/* Story 02 — Volleyball */}
@@ -240,32 +251,79 @@ export default function CaseStudiesPage() {
               Story 02 — Volleyball
             </div>
             <h3 className="text-bone text-3xl sm:text-4xl font-extrabold uppercase tracking-tight leading-none mb-6">
-              Back-to-Back.<br />National Champions.
+              12–12.<br />Then they never lost again.
             </h3>
-            <p className="text-bone-dim text-[15px] leading-relaxed max-w-3xl mb-10">
-              17 years without a national title. Then back-to-back championships. What changed was how
-              they made decisions when matches got tight.
+            <p className="text-bone-dim text-[16px] leading-relaxed max-w-3xl mb-12">
+              The Poison Pawn training system and UCLA men&apos;s volleyball — from a .500 record to
+              back-to-back national champions.
             </p>
-            <div className="mb-4">
-              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-3">
-                See It In Action
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+              <div>
+                <h4 className="text-venom font-mono text-[11px] tracking-[0.2em] uppercase mb-3">The Starting Point</h4>
+                <h5 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">Halfway through, a .500 team.</h5>
+                <p className="text-bone-dim text-[15px] leading-relaxed">
+                  Midway through the 2023 season, the program sat at 12–12 — talented, but going
+                  nowhere in particular. Few would have picked them to win anything, let alone start a
+                  dynasty. What changed wasn&apos;t the roster. It was how they made decisions when
+                  matches got tight.
+                </p>
               </div>
-              <div className="aspect-video max-w-3xl rounded-sm overflow-hidden">
-                <iframe
-                  src="https://player.vimeo.com/video/952086841"
-                  width="100%"
-                  height="100%"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  title="UCLA Volleyball — National Champions"
-                  className="w-full h-full"
-                />
+              <div data-d="2">
+                <h4 className="text-venom font-mono text-[11px] tracking-[0.2em] uppercase mb-3">The Method</h4>
+                <h5 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">Win the points that decide matches.</h5>
+                <p className="text-bone-dim text-[15px] leading-relaxed">
+                  Volleyball turns on a handful of high-pressure moments per set. Poison Pawn&apos;s
+                  training builds the capacity to handle exactly those: reading patterns, executing a
+                  process under pressure, staying composed after an error, and controlling tempo so the
+                  opponent is the one reacting. Decided points stop being a coin flip and start being a
+                  skill.
+                </p>
               </div>
             </div>
-            <p className="text-bone-dim text-[15px] leading-relaxed max-w-3xl mt-6">
-              14 straight wins to close a season no one expected them to win. Then 15 of 16 to repeat.
-              That kind of run under pressure doesn&apos;t happen by accident — it happens when
-              decision-making is trained.
-            </p>
+
+            <div className="border border-line bg-surface-2 rounded-sm p-8 mb-8">
+              <div className="flex flex-col sm:flex-row gap-8 mb-8 pb-8 border-b border-line">
+                <div>
+                  <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-pp-muted mb-1">Before</div>
+                  <div className="text-bone-dim text-[14px]">Midway through 2023: 12–12</div>
+                </div>
+                <div className="text-venom text-2xl self-center">→</div>
+                <div>
+                  <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-1">After</div>
+                  <div className="text-bone text-[14px] font-semibold">2023 &amp; 2024 · National Champions ×2</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  { n: '14', k: 'Straight Wins', s: 'to close 2023' },
+                  { n: '2×', k: 'Back-to-Back', s: 'First repeat since 1995–96' },
+                  { n: 'No. 1', k: 'Final Ranking', s: 'Top seed, 2024' },
+                  { n: '21', k: 'NCAA Titles', s: 'Most all-time in the sport' },
+                ].map((s) => (
+                  <div key={s.k}>
+                    <div className="text-bone text-2xl font-extrabold leading-none mb-1">{s.n}</div>
+                    <div className="text-venom font-mono text-[10px] tracking-[0.14em] uppercase mb-0.5">{s.k}</div>
+                    <div className="text-pp-muted text-[12px]">{s.s}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-pp-muted text-[11px] font-mono mt-6 pt-4 border-t border-line">
+                After a 12–12 start in 2023, UCLA won its final 14 matches to claim the national
+                title, then won 15 of its last 16 in 2024 to repeat — the program&apos;s first
+                back-to-back championships since 1995–96 and its record 20th and 21st titles overall.
+                Figures from NCAA and public records.
+              </p>
+            </div>
+
+            <div className="mt-8 border-l-2 border-venom pl-5 max-w-3xl">
+              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">The Takeaway</div>
+              <p className="text-bone-dim text-[15px] leading-relaxed">
+                A .500 team became a dynasty. Back-to-back national titles don&apos;t come from talent
+                alone — they come from a team that has learned to win the moments that decide
+                championships.
+              </p>
+            </div>
           </div>
         </div>
       </section>
