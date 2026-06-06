@@ -1,4 +1,4 @@
-import DecisionProfileCard from './DecisionProfileCard'
+import TrajectoryCard from './TrajectoryCard'
 
 export default function HomeSystemSection() {
   return (
@@ -35,7 +35,7 @@ export default function HomeSystemSection() {
 
           {/* Right — app mockup */}
           <div className="reveal" data-d="2">
-            <DecisionProfileCard />
+            <TrajectoryCard />
           </div>
 
         </div>
