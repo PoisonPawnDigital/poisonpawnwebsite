@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 // Mirror the NavBar items so the footer matches the navbar (POI website
 // edits V3). NavBar: How It Works, Case Studies, Bring It To Your Team,
 // Media, Founder — plus Contact, which is footer-appropriate.
@@ -44,9 +46,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between gap-12 pb-12 border-b border-line">
           <div className="max-w-xs">
             <div className="mb-2">
-              <a href="/" className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone hover:text-venom transition-colors duration-200">
+              <Link href="/" className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone hover:text-venom transition-colors duration-200">
                 Poison&nbsp;Pawn
-              </a>
+              </Link>
             </div>
             <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-pp-muted">
               #PlayerNotAPiece

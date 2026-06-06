@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 
@@ -31,9 +32,9 @@ export default function NavBar() {
           : 'py-5 border-b border-transparent',
       )}
     >
-      <a href="/" className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone hover:text-venom transition-colors duration-200">
+      <Link href="/" className="font-sans text-[15px] font-semibold tracking-[0.26em] uppercase text-bone hover:text-venom transition-colors duration-200">
         Poison&nbsp;Pawn
-      </a>
+      </Link>
 
       <div className="flex items-center gap-6">
         {links.map(({ href, label }) => (

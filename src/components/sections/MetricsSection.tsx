@@ -90,7 +90,7 @@ export default function MetricsSection() {
         </div>
 
         <p className="mt-6 font-mono text-[11px] text-pp-muted tracking-[0.04em]">
-          // Illustrative profile for layout — replace with real anonymized client data.
+          {'// Illustrative profile for layout — replace with real anonymized client data.'}
         </p>
       </div>
     </section>

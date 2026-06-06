@@ -8,7 +8,12 @@ const features = [
   { href: '/features/pco-executive-series', label: 'P/Co Speaker Series',       title: 'Protect the King',      desc: 'Seth Makowsky on the decision-making discipline that separates champions from everyone else.', img: '/images/founder-at-exhibit.jpg' },
 ]
 
-const outlets = ['The Athletic', 'New York Times', 'LA Times', 'ESPN']
+const outlets = [
+  { label: 'The Athletic', src: '/logos/press-the-athletic.svg', width: 'w-[150px]', invert: true },
+  { label: 'New York Times', src: '/logos/press-new-york-times.svg', width: 'w-[150px]', invert: true },
+  { label: 'LA Times', src: '/logos/press-la-times.svg', width: 'w-[150px]', invert: true },
+  { label: 'ESPN', src: '/logos/press-espn.svg', width: 'w-[92px]', invert: true },
+]
 
 const articles = [
   {
@@ -69,13 +74,20 @@ export default function MediaPage() {
           <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-pp-muted mb-5">
             Coverage
           </div>
-          <div className="flex flex-wrap gap-10 md:gap-16 items-center">
-            {outlets.map((o) => (
+          <div className="flex flex-wrap gap-x-10 gap-y-6 md:gap-x-14 items-center">
+            {outlets.map(({ label, src, width, invert }) => (
               <span
-                key={o}
-                className="font-sans text-[15px] font-bold tracking-[0.06em] text-bone-dim"
+                key={label}
+                aria-label={label}
+                title={label}
+                className="inline-flex h-10 items-center"
               >
-                {o}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={src}
+                  alt={label}
+                  className={`${width} max-h-8 object-contain opacity-70 transition-opacity duration-200 hover:opacity-100 ${invert ? '[filter:brightness(0)_invert(1)]' : ''}`}
+                />
               </span>
             ))}
           </div>
@@ -119,7 +131,7 @@ export default function MediaPage() {
             <div className="border-t border-line" />
           </div>
           <p className="text-pp-muted text-[11px] font-mono mt-6">
-            // Article URLs to be provided by client.
+            {'// Article URLs to be provided by client.'}
           </p>
         </div>
       </section>

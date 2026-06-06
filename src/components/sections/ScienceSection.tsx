@@ -52,8 +52,7 @@ export default function ScienceSection() {
         </div>
 
         <p className="font-mono text-[11px] text-pp-muted tracking-[0.04em]">
-          // Drawn from published, peer-reviewed neuroscience. Establishes the mechanism our method
-          is built on — not a claim that any program guarantees an outcome.
+          {'// Drawn from published, peer-reviewed neuroscience. Establishes the mechanism our method is built on — not a claim that any program guarantees an outcome.'}
         </p>
       </div>
     </section>
