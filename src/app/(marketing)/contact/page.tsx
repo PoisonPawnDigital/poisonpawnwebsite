@@ -27,8 +27,8 @@ export default function ContactPage() {
             </div>
 
             {/* Right — Calendly inline embed */}
-            <div className="reveal lg:-mt-6" data-d="2">
-              <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-venom mb-4">
+            <div className="reveal" data-d="2">
+              <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-venom mb-[6px]">
                 Book A Call
               </div>
               <CalendlyInline />

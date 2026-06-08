@@ -24,7 +24,7 @@ const clients = [
     name: 'USA Swimming',
     src: '/logos/usa-swimming.svg',
     className: 'h-[78px] w-auto',
-    filterClass: '[filter:grayscale(1)_brightness(1.55)_contrast(1.22)]',
+    filterClass: '[filter:none]',
   },
   { name: 'NY Giants',             src: '/logos/ny-giants.svg' },
   {
@@ -70,7 +70,7 @@ export default function TrustSection() {
           100% { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 32s linear infinite;
+          animation: marquee 16s linear infinite;
         }
       `}</style>
     </div>

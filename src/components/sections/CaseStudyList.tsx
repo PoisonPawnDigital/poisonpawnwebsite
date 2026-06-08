@@ -95,7 +95,7 @@ const STUDIES: CaseStudy[] = [
       { n: '69.6%', k: 'Completion', s: 'UCLA single-season record' },
       { n: '10,710', k: 'Passing Yards', s: 'UCLA all-time record' },
       { n: '88', k: 'TD Passes', s: 'UCLA all-time record' },
-      { n: '12,536', k: 'Total Offense', s: 'UCLA all-time record' },
+      { n: '3rd', k: 'Overall Recruit', s: 'Quarterback recruit in the country' },
     ],
     footnote:
       'Thompson-Robinson’s 2022 completion mark set a UCLA single-season record; his career totals stand as program all-time records. Figures from UCLA Athletics and public records.',

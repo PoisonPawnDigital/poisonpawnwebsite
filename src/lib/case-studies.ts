@@ -70,7 +70,7 @@ export const caseStudies: CaseStudy[] = [
       records: [
         { n: '10,710', k: 'Passing yards', s: 'UCLA all-time record' },
         { n: '88', k: 'Touchdown passes', s: 'UCLA all-time record' },
-        { n: '12,536', k: 'Total offense', s: 'UCLA all-time record' },
+        { n: '3rd', k: 'Overall recruit', s: 'Quarterback recruit in the country' },
         { n: '157.4', k: 'Passer efficiency', s: '2022 · 27 TD passes' },
       ],
       foot: 'Sophomore season was his first as a full-time starter. The 2022 completion mark set a UCLA single-season record; career totals stand as program all-time records. Figures from UCLA Athletics and public records.',
