@@ -76,7 +76,7 @@ export default function TrustSection() {
           100% { transform: translateX(-33.333333%); }
         }
         .animate-marquee {
-          animation: marquee 16s linear infinite;
+          animation: marquee 24s linear infinite;
         }
       `}</style>
     </div>
