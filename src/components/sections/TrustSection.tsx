@@ -46,11 +46,11 @@ export default function TrustSection() {
         </span>
       </div>
       <div className="relative">
-        <div className="flex items-center gap-12 animate-marquee whitespace-nowrap">
+        <div className="flex items-center gap-8 animate-marquee whitespace-nowrap">
           {all.map((client, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
+              className="flex-shrink-0 flex w-[150px] md:w-[220px] items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
               style={{ height: 66 }}
             >
               {/* Stable logo boxes keep wide wordmarks and compact icons visually even. */}
