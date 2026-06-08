@@ -1,4 +1,4 @@
-export const metadata = { title: 'The Quarterback Mind — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 const athletes = [
   { name: 'C.J. Stroud',               role: 'Quarterback · Houston Texans',        credential: 'NFL Offensive Rookie of the Year', quote: '"Will you train me after this?"', img: '/images/cj-stroud.jpg' },

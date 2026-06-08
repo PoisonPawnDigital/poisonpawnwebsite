@@ -43,14 +43,14 @@ export default function HowItWorksPage() {
       {/* Hero */}
       <section className="py-16 md:py-20 lg:py-[120px] bg-black">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="reveal max-w-2xl">
+          <div className="reveal max-w-2xl mx-auto text-center">
             <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">
               The System
             </div>
             <h1 className="text-bone text-4xl sm:text-5xl lg:text-7xl font-extrabold uppercase tracking-tight leading-none mb-6">
               Performance Breaks Down<br />When Decisions Do.
             </h1>
-            <p className="text-bone-dim text-lg leading-relaxed max-w-[520px]">
+            <p className="text-bone-dim text-lg leading-relaxed max-w-[520px] mx-auto">
               Poison Pawn was built to solve the one problem every high-performance organization has
               — but no one has ever trained for. Until now.
             </p>
@@ -85,28 +85,27 @@ export default function HowItWorksPage() {
       {/* The Origin */}
       <section className="py-16 md:py-20 lg:py-[120px] bg-surface-2">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="reveal">
-              <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">
-                The Origin
-              </div>
-              <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-8">
-                Built Through Years<br />in the Room.
-              </h2>
-              <p className="text-bone-dim text-[16px] leading-relaxed">
-                Poison Pawn was built from years spent working directly with elite performers across
-                sports, business, and leadership. The pattern was always the same — preparation was
-                exceptional, but the gap was always decision-making under pressure. So we built a
-                system specifically to train it.
-              </p>
+          <div className="reveal max-w-2xl mb-12">
+            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">
+              The Origin
             </div>
-            <div className="reveal" data-d="2">
-              <img
-                src="/images/founder-at-exhibit.jpg"
-                alt="Seth Makowsky at the World Chess Hall of Fame exhibit"
-                className="w-full h-auto rounded-sm"
-              />
-            </div>
+            <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none mb-8">
+              Built Through Years<br />in the Room.
+            </h2>
+            <p className="text-bone-dim text-[16px] leading-relaxed">
+              Poison Pawn was built from years spent working directly with elite performers across
+              sports, business, and leadership. The pattern was always the same — preparation was
+              exceptional, but the gap was always decision-making under pressure. So we built a
+              system specifically to train it.
+            </p>
+          </div>
+          <div className="reveal" data-d="2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/seth-keynote.jpg"
+              alt="Seth Makowsky speaking to a room of executives"
+              className="w-full h-auto rounded-sm"
+            />
           </div>
         </div>
       </section>

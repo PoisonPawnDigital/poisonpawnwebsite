@@ -1,6 +1,6 @@
 import ContactForm from '@/components/sections/ContactForm'
 
-export const metadata = { title: 'Contact — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 export default function ContactPage() {
   return (

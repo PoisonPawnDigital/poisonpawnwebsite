@@ -4,15 +4,13 @@ export default function HeroSection() {
   return (
     <header className="relative min-h-screen flex items-center overflow-hidden bg-black">
       <video
-        className="absolute inset-0 w-full h-full object-cover object-right z-0"
+        className="absolute inset-0 w-full h-full object-cover object-center z-0"
         autoPlay
-        loop
         muted
         playsInline
-        poster="/video/hero_poster.jpg"
+        poster="/video/hero-cameron-poster.png"
       >
-        <source src="/video/hero_loop.webm" type="video/webm" />
-        <source src="/video/hero_loop.mp4" type="video/mp4" />
+        <source src="/video/hero-cameron.mp4" type="video/mp4" />
       </video>
 
       {/* Main scrim */}

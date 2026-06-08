@@ -1,15 +1,12 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function RevealWrapper() {
-  const mounted = useRef(false)
+  const pathname = usePathname()
 
   useEffect(() => {
-    if (mounted.current) return
-    mounted.current = true
-
-    // Immediately show anything already in the viewport on load
     const all = document.querySelectorAll<HTMLElement>('.reveal')
 
     const io = new IntersectionObserver(
@@ -28,10 +25,18 @@ export default function RevealWrapper() {
       },
     )
 
-    all.forEach((el) => io.observe(el))
+    all.forEach((el) => {
+      el.classList.remove('visible')
+      const rect = el.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        el.classList.add('visible')
+        return
+      }
+      io.observe(el)
+    })
 
     return () => io.disconnect()
-  }, [])
+  }, [pathname])
 
   return null
 }

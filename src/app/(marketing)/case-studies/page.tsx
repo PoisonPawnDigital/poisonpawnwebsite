@@ -1,6 +1,6 @@
 import CaseStudyList from '@/components/sections/CaseStudyList'
 
-export const metadata = { title: 'Case Studies — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 export default function CaseStudiesPage() {
   return (

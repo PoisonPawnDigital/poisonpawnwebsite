@@ -1,6 +1,6 @@
 import TrustSection from '@/components/sections/TrustSection'
 
-export const metadata = { title: 'Bring It To Your Team — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 const sectors = [
   {
@@ -10,9 +10,9 @@ const sectors = [
     wide: false,
   },
   {
-    tag: '/ Medicine',
-    title: 'Surgeons & Clinicians',
-    body: 'In medicine, there is no second take. We train the cognitive clarity and composure that allow practitioners to make the right call — precisely, every time.',
+    tag: '/ Healthcare',
+    title: 'Medical Professionals',
+    body: "In healthcare, there is no second take. We train the clarity and composure to make the right call — at every level of the organization. The stakes don't change. The training does.",
     wide: false,
   },
   {
@@ -42,7 +42,7 @@ const sectors = [
   {
     tag: '/ Leadership',
     title: 'Corporate & Entrepreneurial',
-    body: 'For executives and founders who carry the weight of decisions that shape organizations — we build the clarity and composure to lead at the highest level.',
+    body: 'The decisions that define organizations happen fast, under pressure, and without a playbook. We build the clarity to make them well — every time.',
     wide: true,
   },
 ]
@@ -222,28 +222,6 @@ export default function BringItToYourTeamPage() {
               Poison Pawn pricing is based on team size and program needs. There are no standard
               packages — every organization is different, and pricing reflects that.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Closing CTA */}
-      <section className="py-16 md:py-20 lg:py-[120px] bg-obsidian border-t border-line">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 text-center">
-          <div className="reveal">
-            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">Apply</div>
-            <h2 className="text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-none mb-6">
-              Perform At A<br />Different Level.
-            </h2>
-            <p className="text-bone-dim text-[16px] leading-relaxed max-w-xl mx-auto mb-10">
-              Book a call with the Poison Pawn team. Tell us about your program. We&apos;ll take it
-              from there.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-venom text-black font-semibold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-sm hover:bg-gold-bright transition-colors duration-200"
-            >
-              Apply For Training →
-            </a>
           </div>
         </div>
       </section>

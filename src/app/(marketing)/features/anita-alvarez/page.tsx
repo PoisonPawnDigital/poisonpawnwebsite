@@ -1,4 +1,4 @@
-export const metadata = { title: 'Think on the Spot: Anita Alvarez — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 export default function AnitaAlvarezPage() {
   return (

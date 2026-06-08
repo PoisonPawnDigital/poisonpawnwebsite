@@ -1,5 +1,3 @@
-import TrajectoryCard from './TrajectoryCard'
-
 export default function HomeSystemSection() {
   return (
     <section className="py-16 md:py-20 lg:py-[120px] bg-surface">
@@ -35,7 +33,14 @@ export default function HomeSystemSection() {
 
           {/* Right — app mockup */}
           <div className="reveal" data-d="2">
-            <TrajectoryCard />
+            <div className="mx-auto max-w-[360px] overflow-hidden rounded-[28px] border border-line bg-black shadow-2xl shadow-black/40">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/app-your-trajectory.png"
+                alt="Poison Pawn app — Your Trajectory decision profile"
+                className="block w-full h-auto"
+              />
+            </div>
           </div>
 
         </div>

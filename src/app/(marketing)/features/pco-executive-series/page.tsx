@@ -1,4 +1,4 @@
-export const metadata = { title: 'Protect the King — Poison Pawn × P/Co Executive Speaker Series' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 export default function PcoExecutiveSeriesPage() {
   return (

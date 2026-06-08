@@ -1,4 +1,4 @@
-export const metadata = { title: 'Every Move Is a Decision: Cameron Diaz — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 export default function CameronDiazPage() {
   return (

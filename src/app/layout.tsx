@@ -47,7 +47,7 @@ export default function RootLayout({
     >
       <head>
         {/* Preload hero poster so LCP resolves before video loads */}
-        <link rel="preload" as="image" href="/video/hero_poster.jpg" />
+        <link rel="preload" as="image" href="/video/hero-cameron-poster.png" />
       </head>
       <body>
         <NavBar />

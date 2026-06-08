@@ -1,4 +1,4 @@
-export const metadata = { title: 'The Answer Is Always on the Board — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 export default function NbaChessPage() {
   return (

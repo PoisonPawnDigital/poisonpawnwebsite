@@ -1,15 +1,29 @@
 'use client'
 
 import { useState } from 'react'
+import { submitForm } from '@/lib/form'
 
 export default function ApplySection() {
   const [track, setTrack] = useState<'enterprise' | 'individual'>('enterprise')
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState('')
+  const [sending, setSending] = useState(false)
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    // TODO: wire to Formspree endpoint before launch
-    setSubmitted(true)
+    const form = e.currentTarget
+    const data = new FormData(form)
+    data.set('track', track === 'enterprise' ? 'Teams & Organizations' : 'Individual (waitlist)')
+    setError('')
+    setSending(true)
+    try {
+      await submitForm(data)
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
+    } finally {
+      setSending(false)
+    }
   }
 
   return (
@@ -59,6 +73,7 @@ export default function ApplySection() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+              <input type="hidden" name="_subject" value="New Poison Pawn application" />
               <div className="flex flex-col gap-1.5">
                 <label className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom">Full name</label>
                 <input
@@ -90,15 +105,17 @@ export default function ApplySection() {
                   />
                 </div>
               )}
+              {error && <p className="text-[13px] text-red-400">{error}</p>}
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                 <small className="text-pp-muted text-[12px]">
                   We&apos;ll be in touch to scope a conversation. We never share your information.
                 </small>
                 <button
                   type="submit"
-                  className="flex-shrink-0 bg-venom text-black font-bold text-[13px] tracking-[0.1em] uppercase px-7 py-3.5 rounded-sm hover:bg-gold-bright transition-colors duration-200"
+                  disabled={sending}
+                  className="flex-shrink-0 bg-venom text-black font-bold text-[13px] tracking-[0.1em] uppercase px-7 py-3.5 rounded-sm hover:bg-gold-bright transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send →
+                  {sending ? 'Sending…' : 'Send →'}
                 </button>
               </div>
             </form>

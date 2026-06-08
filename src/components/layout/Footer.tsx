@@ -5,8 +5,8 @@ import Link from 'next/link'
 // Media, Founder — plus Contact, which is footer-appropriate.
 const systemLinks = [
   { href: '/how-it-works',          label: 'How It Works' },
-  { href: '/case-studies',          label: 'Case Studies' },
   { href: '/bring-it-to-your-team', label: 'Bring It To Your Team' },
+  { href: '/case-studies',          label: 'Case Studies' },
   { href: '/media',                 label: 'Media' },
   { href: '/founder',               label: 'Founder' },
   { href: '/contact',               label: 'Contact' },
@@ -14,7 +14,7 @@ const systemLinks = [
 
 const connectLinks = [
   { href: 'https://instagram.com/poisonpawnhq/', label: 'Instagram' },
-  { href: 'https://x.com/PoisonPawnChess',       label: 'Twitter / X' },
+  { href: 'https://x.com/poisonpawnhq',          label: 'Twitter / X' },
   { href: 'https://linkedin.com/company/poisonpawn', label: 'LinkedIn' },
 ]
 

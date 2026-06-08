@@ -70,19 +70,19 @@ export default function MediaPage() {
           <div className="font-mono text-[10px] tracking-[0.24em] uppercase text-pp-muted mb-5">
             Coverage
           </div>
-          <div className="flex flex-wrap gap-x-10 gap-y-6 md:gap-x-14 items-center">
+          <div className="flex flex-nowrap items-center justify-between gap-x-3 sm:gap-x-6">
             {outlets.map(({ label, src, invert }) => (
               <span
                 key={label}
                 aria-label={label}
                 title={label}
-                className="inline-flex h-10 w-[120px] items-center justify-center"
+                className="inline-flex h-8 sm:h-10 flex-1 min-w-0 items-center justify-center"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={src}
                   alt={label}
-                  className={`max-h-7 max-w-full object-contain opacity-70 transition-opacity duration-200 hover:opacity-100 ${invert ? '[filter:brightness(0)_invert(1)]' : ''}`}
+                  className={`max-h-5 sm:max-h-7 max-w-full object-contain opacity-70 transition-opacity duration-200 hover:opacity-100 ${invert ? '[filter:brightness(0)_invert(1)]' : ''}`}
                 />
               </span>
             ))}
@@ -101,14 +101,36 @@ export default function MediaPage() {
               In The Press.
             </h2>
           </div>
+          {/* Featured story — headlined, set apart from the rest */}
+          {articles.filter((a) => a.highlight).map((a) => (
+            <a
+              key={a.href}
+              href={a.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="reveal group block border border-venom/45 bg-venom/[0.05] rounded-sm p-8 md:p-12 mb-14 transition-colors duration-200 hover:bg-venom/[0.09]"
+            >
+              <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-black bg-venom inline-block px-3 py-1 mb-6">
+                Featured Story · {a.outlet}
+              </span>
+              <h3 className="text-bone text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-tight leading-[1.05] mb-5 max-w-3xl">
+                {a.headline}
+              </h3>
+              <p className="text-bone-dim text-[15px] md:text-base leading-relaxed mb-6 max-w-2xl">{a.desc}</p>
+              <span className="text-venom text-[14px] tracking-[0.04em] group-hover:text-gold-bright transition-colors">
+                {a.cta}
+              </span>
+            </a>
+          ))}
+
           <div className="flex flex-col gap-0">
-            {articles.map((a) => (
+            {articles.filter((a) => !a.highlight).map((a) => (
               <div
                 key={a.href}
-                className={`reveal border-t py-10 flex flex-col sm:flex-row sm:items-start gap-6 ${a.highlight ? 'border-venom/45 bg-venom/[0.035] px-5 sm:px-6' : 'border-line'}`}
+                className="reveal border-t border-line py-10 flex flex-col sm:flex-row sm:items-start gap-6"
               >
                 <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-venom w-36 flex-shrink-0 pt-1">
-                  {a.highlight ? 'Featured · ' : ''}{a.outlet}
+                  {a.outlet}
                 </div>
                 <div className="flex-1">
                   <h3 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-3">
@@ -189,7 +211,7 @@ export default function MediaPage() {
           <div className="reveal max-w-3xl">
             <div className="aspect-video rounded-sm overflow-hidden">
               <iframe
-                src="https://player.vimeo.com/video/544334933"
+                src="https://player.vimeo.com/video/544334933?title=0&byline=0&portrait=0&badge=0&dnt=1"
                 width="100%"
                 height="100%"
                 allow="autoplay; fullscreen; picture-in-picture"
