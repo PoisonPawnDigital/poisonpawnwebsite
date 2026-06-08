@@ -6,7 +6,12 @@ const clients = [
     filterClass: '[filter:grayscale(1)_brightness(1.35)]',
   },
   { name: 'YPO',                   src: '/logos/ypo.svg' },
-  { name: 'Panda Restaurant Group',src: '/logos/panda-restaurant-group.svg' },
+  {
+    name: 'Panda Restaurant Group',
+    src: '/logos/panda-restaurant-group.png',
+    className: 'h-[34px]',
+    filterClass: '[filter:grayscale(1)_brightness(1.25)]',
+  },
   { name: 'UCLA',                  src: '/logos/ucla.svg' },
   { name: 'Michigan State',        src: '/logos/michigan-state.svg' },
   {
