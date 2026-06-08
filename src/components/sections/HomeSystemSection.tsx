@@ -33,12 +33,12 @@ export default function HomeSystemSection() {
 
           {/* Right — app mockup */}
           <div className="reveal" data-d="2">
-            <div className="mx-auto max-w-[360px] overflow-hidden rounded-[28px] border border-line bg-black shadow-2xl shadow-black/40">
+            <div className="mx-auto h-[540px] max-w-[360px] overflow-hidden rounded-[28px] border border-line bg-black shadow-2xl shadow-black/40 sm:h-[600px] lg:h-[620px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/app-your-trajectory.png"
                 alt="Poison Pawn app — Your Trajectory decision profile"
-                className="block w-full h-auto"
+                className="block h-auto w-full -translate-y-[64px]"
               />
             </div>
           </div>
