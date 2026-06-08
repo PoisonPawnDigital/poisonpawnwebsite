@@ -128,7 +128,7 @@ const STUDIES: CaseStudy[] = [
       'After a 12–12 start in 2023, UCLA won its final 14 matches to claim the national title, then won 15 of its last 16 in 2024 to repeat — the program’s first back-to-back championships since 1995–96 and its record 20th and 21st titles overall. Figures from NCAA and public records.',
     biggerPicture: {
       h: 'A .500 team became a dynasty.',
-      body: 'Back-to-back national titles don’t come from talent alone — they come from a team that has learned to win the moments that decide championships.',
+      body: 'Two championships in two years don’t happen by accident. The physical preparation at that level is table stakes — every program in contention has it. What separates the ones that close it out is how they make decisions when the pressure is highest and the margin is smallest. That’s the edge that compounds over a full season.',
     },
   },
 ]
