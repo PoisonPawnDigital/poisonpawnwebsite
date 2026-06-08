@@ -36,8 +36,6 @@ const clients = [
 ]
 
 export default function TrustSection() {
-  const all = [...clients, ...clients]
-
   return (
     <div className="border-y border-line bg-surface py-5 overflow-hidden" style={{ contain: 'layout' }}>
       <div className="flex items-center gap-8 mb-3 px-8">
@@ -46,20 +44,28 @@ export default function TrustSection() {
         </span>
       </div>
       <div className="relative">
-        <div className="flex items-center gap-5 animate-marquee whitespace-nowrap">
-          {all.map((client, i) => (
+        <div className="flex w-max animate-marquee whitespace-nowrap">
+          {[0, 1, 2].map((setIndex) => (
             <div
-              key={i}
-              className="flex-shrink-0 flex w-[162px] md:w-[230px] items-center justify-center opacity-75 hover:opacity-100 transition-opacity"
-              style={{ height: 100 }}
+              key={setIndex}
+              className="flex shrink-0 items-center gap-5 pr-5"
+              aria-hidden={setIndex === 1}
             >
-              {/* Stable logo boxes keep wide wordmarks and compact icons visually even. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={client.src}
-                alt={client.name}
-                className={`${client.className ?? 'h-[52px] w-auto'} object-contain ${client.filterClass ?? '[filter:grayscale(1)_brightness(0)_invert(1)]'}`}
-              />
+              {clients.map((client) => (
+                <div
+                  key={`${setIndex}-${client.name}`}
+                  className="flex w-[162px] flex-shrink-0 items-center justify-center opacity-75 transition-opacity hover:opacity-100 md:w-[230px]"
+                  style={{ height: 100 }}
+                >
+                  {/* Stable logo boxes keep wide wordmarks and compact icons visually even. */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={client.src}
+                    alt={client.name}
+                    className={`${client.className ?? 'h-[52px] w-auto'} object-contain ${client.filterClass ?? '[filter:grayscale(1)_brightness(0)_invert(1)]'}`}
+                  />
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -67,7 +73,7 @@ export default function TrustSection() {
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-33.333333%); }
         }
         .animate-marquee {
           animation: marquee 16s linear infinite;
