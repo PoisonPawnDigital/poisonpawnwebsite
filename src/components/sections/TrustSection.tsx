@@ -2,14 +2,14 @@ const clients = [
   {
     name: 'Porsche',
     src: '/logos/porsche.svg',
-    className: 'h-[38px]',
+    className: 'h-[42px] w-auto',
     filterClass: '[filter:grayscale(1)_brightness(1.35)]',
   },
   { name: 'YPO',                   src: '/logos/ypo.svg' },
   {
     name: 'Panda Restaurant Group',
-    src: '/logos/panda-restaurant-group.png',
-    className: 'h-[34px]',
+    src: '/logos/panda-express-emblem.png',
+    className: 'h-[46px] w-[128px]',
     filterClass: '[filter:grayscale(1)_brightness(1.25)]',
   },
   { name: 'UCLA',                  src: '/logos/ucla.svg' },
@@ -17,17 +17,22 @@ const clients = [
   {
     name: 'Toronto Blue Jays',
     src: '/logos/toronto-blue-jays.svg',
-    className: 'h-[38px]',
+    className: 'h-[44px] w-auto',
     filterClass: '[filter:none]',
   },
   {
     name: 'USA Swimming',
     src: '/logos/usa-swimming.svg',
-    className: 'h-[34px]',
+    className: 'h-[42px] w-auto',
     filterClass: '[filter:none]',
   },
   { name: 'NY Giants',             src: '/logos/ny-giants.svg' },
-  { name: 'NFLPA',                 src: '/logos/nflpa.svg' },
+  {
+    name: 'NFLPA',
+    src: '/logos/nflpa.png',
+    className: 'h-[44px] w-auto',
+    filterClass: '[filter:grayscale(1)_brightness(1.25)]',
+  },
 ]
 
 export default function TrustSection() {
@@ -46,16 +51,14 @@ export default function TrustSection() {
             <div
               key={i}
               className="flex-shrink-0 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
-              style={{ height: 54 }}
+              style={{ height: 66 }}
             >
-              {/* Uniform height keeps every logo the same visual size regardless of
-                  aspect ratio; the filter renders each as a clean grayscale (white)
-                  mark with no background on the dark bar. */}
+              {/* Stable logo boxes keep wide wordmarks and compact icons visually even. */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={client.src}
                 alt={client.name}
-                className={`${client.className ?? 'h-[26px]'} w-auto object-contain ${client.filterClass ?? '[filter:grayscale(1)_brightness(0)_invert(1)]'}`}
+                className={`${client.className ?? 'h-[34px] w-auto'} object-contain ${client.filterClass ?? '[filter:grayscale(1)_brightness(0)_invert(1)]'}`}
               />
             </div>
           ))}
