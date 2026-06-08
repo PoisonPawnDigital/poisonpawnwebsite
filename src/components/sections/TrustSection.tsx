@@ -1,11 +1,26 @@
 const clients = [
-  { name: 'Porsche',               src: '/logos/porsche.svg' },
+  {
+    name: 'Porsche',
+    src: '/logos/porsche.svg',
+    className: 'h-[38px]',
+    filterClass: '[filter:grayscale(1)_brightness(1.35)]',
+  },
   { name: 'YPO',                   src: '/logos/ypo.svg' },
   { name: 'Panda Restaurant Group',src: '/logos/panda-restaurant-group.svg' },
   { name: 'UCLA',                  src: '/logos/ucla.svg' },
   { name: 'Michigan State',        src: '/logos/michigan-state.svg' },
-  { name: 'Toronto Blue Jays',     src: '/logos/toronto-blue-jays.svg' },
-  { name: 'USA Swimming',          src: '/logos/usa-swimming.svg' },
+  {
+    name: 'Toronto Blue Jays',
+    src: '/logos/toronto-blue-jays.svg',
+    className: 'h-[38px]',
+    filterClass: '[filter:none]',
+  },
+  {
+    name: 'USA Swimming',
+    src: '/logos/usa-swimming.svg',
+    className: 'h-[34px]',
+    filterClass: '[filter:none]',
+  },
   { name: 'NY Giants',             src: '/logos/ny-giants.svg' },
   { name: 'NFLPA',                 src: '/logos/nflpa.svg' },
 ]
@@ -35,7 +50,7 @@ export default function TrustSection() {
               <img
                 src={client.src}
                 alt={client.name}
-                className="h-[26px] w-auto object-contain [filter:grayscale(1)_brightness(0)_invert(1)]"
+                className={`${client.className ?? 'h-[26px]'} w-auto object-contain ${client.filterClass ?? '[filter:grayscale(1)_brightness(0)_invert(1)]'}`}
               />
             </div>
           ))}
