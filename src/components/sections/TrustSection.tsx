@@ -31,7 +31,7 @@ const clients = [
     name: 'NFLPA',
     src: '/logos/nflpa.png',
     className: 'h-[50px] w-auto',
-    filterClass: '[filter:grayscale(1)_invert(1)_brightness(1.25)_contrast(1.15)]',
+    filterClass: '[filter:grayscale(1)_brightness(1.12)_contrast(1.05)]',
   },
 ]
 
