@@ -1,18 +1,13 @@
-export const metadata = { title: 'Media — Poison Pawn' }
-
-const features = [
-  { href: '/features/the-quarterback-mind', label: 'World Chess Hall of Fame', title: 'The Quarterback Mind', desc: 'Poison Pawn featured at the Game Plan exhibition — the athletes, the system, and the science behind it.', img: '/images/player-not-a-piece-gallery.jpg' },
-  { href: '/features/anita-alvarez',        label: 'Off the Board',             title: 'Think on the Spot',     desc: 'Three-time Olympian Anita Alvarez on learning to decide when everything is on the line.', img: '/images/anita-alvarez.jpg' },
-  { href: '/features/cameron-diaz',         label: 'Off the Board',             title: 'Every Move Is a Decision', desc: 'Cameron Diaz on the method that trained how she decides — and why it was never about chess.', img: '/images/player-not-a-piece-neon.jpg' },
-  { href: '/features/nba-chess',            label: 'Chess & Basketball',        title: 'The Answer Is Always on the Board', desc: 'The NBA discovered chess. Poison Pawn is the authority on turning it into a competitive edge.', img: '/images/wchof-exhibit-installation.jpg' },
-  { href: '/features/pco-executive-series', label: 'P/Co Speaker Series',       title: 'Protect the King',      desc: 'Seth Makowsky on the decision-making discipline that separates champions from everyone else.', img: '/images/founder-at-exhibit.jpg' },
-]
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 const outlets = [
-  { label: 'The Athletic', src: '/logos/press-the-athletic.svg', width: 'w-[150px]', invert: true },
-  { label: 'New York Times', src: '/logos/press-new-york-times.svg', width: 'w-[150px]', invert: true },
-  { label: 'LA Times', src: '/logos/press-la-times.svg', width: 'w-[150px]', invert: true },
-  { label: 'ESPN', src: '/logos/press-espn.svg', width: 'w-[92px]', invert: true },
+  { label: 'The Athletic', src: '/logos/press-the-athletic.svg', invert: true },
+  { label: 'New York Times', src: '/logos/press-new-york-times.svg', invert: true },
+  { label: 'LA Times', src: '/logos/press-la-times.svg', invert: true },
+  { label: 'ESPN', src: '/logos/press-espn.svg', invert: true },
+  { label: 'Washington Post', src: '/logos/press-washington-post.svg', invert: true },
+  { label: 'CNN', src: '/logos/press-cnn.svg', invert: true },
+  { label: 'Reuters', src: '/logos/press-reuters.svg', invert: true },
 ]
 
 const articles = [
@@ -21,28 +16,29 @@ const articles = [
     headline: 'C.J. Stroud: From Overshadowed to Ohio State Star, Thanks to Talent, Chess',
     desc: 'The piece that put Poison Pawn on the map — detailing how chess-based decision training transformed one of the most watched quarterbacks in the country.',
     cta: 'Read the Full Story →',
-    href: '#',
+    href: 'https://www.nytimes.com/athletic/3565250/2022/09/05/cj-stroud-ohio-state-the-opening/',
+    highlight: true,
   },
   {
     outlet: 'LA Times',
     headline: 'How a Chess Guru Became a Trendy Mental Coach for Rising NFL Quarterbacks',
     desc: 'A deep look at how Seth Makowsky built a system that is quietly changing how the best quarterbacks in football prepare.',
     cta: 'Read More →',
-    href: '#',
+    href: 'https://www.latimes.com/sports/story/2023-10-06/chess-guru-seth-makowsky-mental-coach-rising-nfl-quarterbacks',
   },
   {
     outlet: 'New York Times',
-    headline: 'Teaching Olympians How to Make the Right Moves',
-    desc: 'How Poison Pawn is being used at the Olympic level to train decision-making in the world\'s most elite athletes.',
+    headline: 'Seth Makowsky takes quarterbacks’ thinking from checkers to chess',
+    desc: 'A look at how Makowsky uses chess to sharpen quarterbacks’ processing, patience, and decision-making before the pressure arrives on the field.',
     cta: 'Read More →',
-    href: '#',
+    href: 'https://www.nytimes.com/athletic/1893860/2020/06/29/seth-makowsky-chess-quarterbacks-coach-football/',
   },
   {
-    outlet: 'ESPN',
-    headline: 'Player Not A Piece',
-    desc: 'ESPN\'s feature on Poison Pawn and the philosophy behind training performers to think — not just execute.',
+    outlet: 'Reuters',
+    headline: 'Makowsky teaching Olympians how to make right moves',
+    desc: 'Reuters follows Makowsky’s work with Olympic athletes and the way chess-based training builds composure, pattern recognition, and better decisions under pressure.',
     cta: 'Read More →',
-    href: '#',
+    href: 'https://www.reuters.com/article/uk-olympics-chess-makowsky-feature/chess-makowsky-teaching-olympians-how-to-make-right-moves-idUKKCN1U01AZ/',
   },
 ]
 
@@ -75,18 +71,18 @@ export default function MediaPage() {
             Coverage
           </div>
           <div className="flex flex-wrap gap-x-10 gap-y-6 md:gap-x-14 items-center">
-            {outlets.map(({ label, src, width, invert }) => (
+            {outlets.map(({ label, src, invert }) => (
               <span
                 key={label}
                 aria-label={label}
                 title={label}
-                className="inline-flex h-10 items-center"
+                className="inline-flex h-10 w-[120px] items-center justify-center"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={src}
                   alt={label}
-                  className={`${width} max-h-8 object-contain opacity-70 transition-opacity duration-200 hover:opacity-100 ${invert ? '[filter:brightness(0)_invert(1)]' : ''}`}
+                  className={`max-h-7 max-w-full object-contain opacity-70 transition-opacity duration-200 hover:opacity-100 ${invert ? '[filter:brightness(0)_invert(1)]' : ''}`}
                 />
               </span>
             ))}
@@ -106,13 +102,13 @@ export default function MediaPage() {
             </h2>
           </div>
           <div className="flex flex-col gap-0">
-            {articles.map((a, i) => (
+            {articles.map((a) => (
               <div
-                key={i}
-                className="reveal border-t border-line py-10 flex flex-col sm:flex-row sm:items-start gap-6"
+                key={a.href}
+                className={`reveal border-t py-10 flex flex-col sm:flex-row sm:items-start gap-6 ${a.highlight ? 'border-venom/45 bg-venom/[0.035] px-5 sm:px-6' : 'border-line'}`}
               >
                 <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-venom w-36 flex-shrink-0 pt-1">
-                  {a.outlet}
+                  {a.highlight ? 'Featured · ' : ''}{a.outlet}
                 </div>
                 <div className="flex-1">
                   <h3 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-3">
@@ -121,6 +117,8 @@ export default function MediaPage() {
                   <p className="text-bone-dim text-[14px] leading-relaxed mb-4">{a.desc}</p>
                   <a
                     href={a.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-venom text-[13px] hover:text-gold-bright transition-colors"
                   >
                     {a.cta}
@@ -129,39 +127,6 @@ export default function MediaPage() {
               </div>
             ))}
             <div className="border-t border-line" />
-          </div>
-          <p className="text-pp-muted text-[11px] font-mono mt-6">
-            {'// Article URLs to be provided by client.'}
-          </p>
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="py-16 md:py-20 lg:py-[120px] bg-surface border-t border-line">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="reveal mb-12">
-            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">Features</div>
-            <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
-              Off the Board.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((f, i) => (
-              <a
-                key={f.href}
-                href={f.href}
-                className="reveal group border border-line bg-surface-2 rounded-sm overflow-hidden hover:border-venom/50 transition-colors duration-300"
-                data-d={(i % 3) + 1}
-              >
-                <img src={f.img} alt={f.title} className="w-full aspect-[16/9] object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="p-6">
-                  <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">{f.label}</div>
-                  <h3 className="text-bone text-lg font-extrabold uppercase tracking-tight mb-3">{f.title}</h3>
-                  <p className="text-bone-dim text-[13px] leading-relaxed mb-4">{f.desc}</p>
-                  <span className="text-venom text-[13px] group-hover:text-gold-bright transition-colors">Read the feature →</span>
-                </div>
-              </a>
-            ))}
           </div>
         </div>
       </section>
@@ -189,7 +154,9 @@ export default function MediaPage() {
                 Olympic athletes, and championship programs that have trained through the system.
               </p>
               <a
-                href="#"
+                href="https://worldchesshof.org/news-insights/game-plan-the-strategy-of-chess-sports-opens-may-7-at-world-chess-hall-of-fame-galleries/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block border border-line-strong text-bone text-sm tracking-[0.08em] uppercase px-7 py-4 rounded-sm hover:border-bone-dim transition-colors duration-200"
               >
                 View the Exhibition →
@@ -212,17 +179,21 @@ export default function MediaPage() {
           <div className="reveal mb-8">
             <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-2">Footage</div>
             <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-bone-dim">
-              Poison Pawn Summer Event
+              Featured ESPN Video
             </div>
+            <p className="text-bone-dim text-[15px] leading-relaxed max-w-2xl mt-4">
+              ESPN&apos;s feature on Poison Pawn and the philosophy behind training performers to think
+              clearly when the board, the clock, and the pressure all change at once.
+            </p>
           </div>
           <div className="reveal max-w-3xl">
             <div className="aspect-video rounded-sm overflow-hidden">
               <iframe
-                src="https://player.vimeo.com/video/1050288775?h=d5752a86e7"
+                src="https://player.vimeo.com/video/544334933"
                 width="100%"
                 height="100%"
                 allow="autoplay; fullscreen; picture-in-picture"
-                title="Poison Pawn Summer Event"
+                title="Featured ESPN Video"
                 className="w-full h-full"
               />
             </div>

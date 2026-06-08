@@ -1,4 +1,4 @@
-export const metadata = { title: 'How It Works — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 const pillars = [
   {
@@ -167,6 +167,34 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
+      {/* This Is For You If */}
+      <section className="py-16 md:py-20 lg:py-[120px] bg-surface-2 border-t border-line">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
+          <div className="reveal mb-12">
+            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
+              Who This Is For
+            </div>
+            <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
+              This Is For You If.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {conditions.map((c, i) => (
+              <div
+                key={i}
+                className="reveal border border-line bg-surface rounded-sm p-8"
+                data-d={(i % 3) + 1}
+              >
+                <h3 className="text-bone text-xl font-extrabold uppercase tracking-tight leading-snug mb-4">
+                  {c.h3}
+                </h3>
+                <p className="text-bone-dim text-[14px] leading-relaxed">{c.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* See It In Practice — Case studies CTA */}
       <section className="py-16 md:py-20 lg:py-[120px] bg-black border-t border-line">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
@@ -190,42 +218,6 @@ export default function HowItWorksPage() {
               className="inline-block border border-venom text-venom font-mono text-[12px] tracking-[0.18em] uppercase px-8 py-4 rounded-sm hover:bg-venom hover:text-black transition-colors duration-200"
             >
               View Case Studies
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* This Is For You If */}
-      <section className="py-16 md:py-20 lg:py-[120px] bg-surface-2">
-        <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
-          <div className="reveal mb-12">
-            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-4">
-              Who This Is For
-            </div>
-            <h2 className="text-bone text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight leading-none">
-              This Is For You If.
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {conditions.map((c, i) => (
-              <div
-                key={i}
-                className="reveal border border-line bg-surface rounded-sm p-8"
-                data-d={(i % 3) + 1}
-              >
-                <h3 className="text-bone text-xl font-extrabold uppercase tracking-tight leading-snug mb-4">
-                  {c.h3}
-                </h3>
-                <p className="text-bone-dim text-[14px] leading-relaxed">{c.body}</p>
-              </div>
-            ))}
-          </div>
-          <div className="reveal text-center">
-            <a
-              href="/contact"
-              className="inline-block bg-venom text-black font-semibold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-sm hover:bg-gold-bright transition-colors duration-200"
-            >
-              Apply For Training →
             </a>
           </div>
         </div>
