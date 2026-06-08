@@ -1,4 +1,4 @@
-export const metadata = { title: 'Founder — Poison Pawn' }
+export const metadata = { title: 'POISON PAWN® | Player Not A Piece' }
 
 const engagements = [
   {

@@ -32,11 +32,11 @@ export default function TestimonialsSection() {
             {/* 1920×816 — cinematic widescreen (40:17). For production: upload to Vimeo and swap for iframe */}
             <div className="aspect-[40/17] bg-black rounded-sm overflow-hidden">
               <video
-                src="/video/cameron-diaz.mp4"
+                src="/video/hero-cameron.mp4"
                 controls
                 playsInline
                 className="w-full h-full object-contain"
-                poster="/images/player-not-a-piece-neon.jpg"
+                poster="/video/hero-cameron-poster.png"
               />
             </div>
             <div className="text-center mt-4">

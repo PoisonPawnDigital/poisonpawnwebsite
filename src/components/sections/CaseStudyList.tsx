@@ -5,9 +5,11 @@ import { useState } from 'react'
 type Stat = { n: string; k: string; s: string }
 type BeforeAfter = { tag: string; value: string }
 
-// Studies 01 & 02 share one rich shape: collapsed → headline + before/after;
-// expanded → starting point, method, the numbers, and the bigger picture.
-type RichStudy = {
+// One uniform shape for every case study so they all read the same way:
+// collapsed → headline + before/after; expanded → starting point, method,
+// the numbers, and the bigger picture. UCLA Football and UCLA Volleyball are
+// each their own standalone study, exactly like Blue Jays and the Olympics.
+type CaseStudy = {
   label: string
   headline: string
   deck: string
@@ -20,20 +22,7 @@ type RichStudy = {
   biggerPicture: { h: string; body: string }
 }
 
-// Study 03 (UCLA) is one case study with two stories — Football and
-// Volleyball — exactly as it appears in the source.
-type UclaStory = {
-  kicker: string
-  headline: string
-  body: string
-  before: BeforeAfter
-  after: BeforeAfter
-  stats: Stat[]
-  footnote: string
-  biggerPicture: string
-}
-
-const RICH_STUDIES: RichStudy[] = [
+const STUDIES: CaseStudy[] = [
   {
     label: 'Case Study 01 — Major League Baseball',
     headline: 'From the basement to Game 7 of the World Series.',
@@ -88,66 +77,78 @@ const RICH_STUDIES: RichStudy[] = [
       body: 'The margin was 0.66 points. At that level, the difference between heartbreak and a podium isn’t physical — it’s the quality of decisions made when the pressure is highest. One year later, the team stood on the Olympic podium. The brain can be trained to perform differently under pressure. This is what that looks like.',
     },
   },
+  {
+    label: 'Case Study 03 — UCLA Football',
+    headline: 'From 12 interceptions to the record books.',
+    deck: 'UCLA brought in Poison Pawn to sharpen decision-making under pressure. It started with one quarterback — Dorian Thompson-Robinson — and became part of how the program develops talent.',
+    before: { tag: 'Sophomore · 2019', value: '59%' },
+    after: { tag: 'Final season · 2022', value: '69.6%' },
+    startingPoint: {
+      h: 'Every tool. No repeatable process.',
+      body: 'In 2019, UCLA brought in Poison Pawn with a single mandate: sharpen its players’ decision-making under time and pressure. The first athlete in the program was Dorian Thompson-Robinson, a sophomore quarterback in his first year as a starter. That season he completed just 59% of his passes and threw 12 interceptions. The raw ability was never in question — what was missing was a way to make the same clear-headed decision, every snap.',
+    },
+    method: {
+      h: 'It was never really about chess.',
+      body: 'On the board, decision-making becomes visible — how an athlete reads patterns, recovers from a mistake, whether they follow a process or fall back on instinct. Poison Pawn used that mirror to build a repeatable system: study patterns instead of trusting raw athleticism, compartmentalize errors so one bad play never bleeds into the next, and control tempo so the opponent is the one forced to react.',
+    },
+    stats: [
+      { n: '69.6%', k: 'Completion', s: 'UCLA single-season record' },
+      { n: '10,710', k: 'Passing Yards', s: 'UCLA all-time record' },
+      { n: '88', k: 'TD Passes', s: 'UCLA all-time record' },
+      { n: '12,536', k: 'Total Offense', s: 'UCLA all-time record' },
+    ],
+    footnote:
+      'Thompson-Robinson’s 2022 completion mark set a UCLA single-season record; his career totals stand as program all-time records. Figures from UCLA Athletics and public records.',
+    biggerPicture: {
+      h: 'The work outlived the player.',
+      body: 'What started with Dorian Thompson-Robinson became part of how UCLA develops quarterbacks — and helped the program land Dante Moore, the No. 3 quarterback in the country, who pointed to that development work as a reason he chose the school.',
+    },
+  },
+  {
+    label: 'Case Study 04 — UCLA Volleyball',
+    headline: '12–12. Then they never lost again.',
+    deck: 'The Poison Pawn training system and UCLA men’s volleyball — from a .500 record to back-to-back national champions.',
+    before: { tag: 'Midway through 2023', value: '12–12' },
+    after: { tag: '2023 & 2024', value: 'Champions ×2' },
+    startingPoint: {
+      h: 'Halfway through, a .500 team.',
+      body: 'Midway through the 2023 season, the program sat at 12–12 — talented, but going nowhere in particular. Few would have picked them to win anything, let alone start a dynasty. What changed wasn’t the roster. It was how they made decisions when matches got tight.',
+    },
+    method: {
+      h: 'Win the points that decide matches.',
+      body: 'Volleyball turns on a handful of high-pressure moments per set. Poison Pawn’s training builds the capacity to handle exactly those: reading patterns, executing a process under pressure, staying composed after an error, and controlling tempo so the opponent is the one reacting. Decided points stop being a coin flip and start being a skill.',
+    },
+    stats: [
+      { n: '14', k: 'Straight Wins', s: 'to close 2023' },
+      { n: '2×', k: 'Back-to-Back', s: 'First repeat since 1995–96' },
+      { n: 'No. 1', k: 'Final Ranking', s: 'Top seed, 2024' },
+      { n: '21', k: 'NCAA Titles', s: 'Most all-time in the sport' },
+    ],
+    footnote:
+      'After a 12–12 start in 2023, UCLA won its final 14 matches to claim the national title, then won 15 of its last 16 in 2024 to repeat — the program’s first back-to-back championships since 1995–96 and its record 20th and 21st titles overall. Figures from NCAA and public records.',
+    biggerPicture: {
+      h: 'A .500 team became a dynasty.',
+      body: 'Back-to-back national titles don’t come from talent alone — they come from a team that has learned to win the moments that decide championships.',
+    },
+  },
 ]
 
-const UCLA_STUDY = {
-  label: 'Case Study 03 — UCLA Athletics',
-  headline: 'UCLA Athletics.',
-  deck: 'Poison Pawn was integrated into UCLA Athletics starting in 2019. What began with a single quarterback spread through the program — and produced two separate championship runs across two different sports.',
-  stories: [
-    {
-      kicker: 'Story 01 — Football',
-      headline: 'From 12 interceptions to the record books.',
-      body: 'In 2019, UCLA brought in Poison Pawn with a single mandate: sharpen its players’ decision-making under time and pressure. The first athlete in the program was Dorian Thompson-Robinson — a sophomore quarterback in his first year as a starter, talented but inconsistent. That season he completed just 59% of his passes and threw 12 interceptions. What was missing was a repeatable process for making clear-headed decisions, every snap, regardless of the situation.',
-      before: { tag: 'Sophomore · 2019', value: '59%' },
-      after: { tag: 'Final Season · 2022', value: '69.6%' },
-      stats: [
-        { n: '69.6%', k: 'Completion', s: 'UCLA single-season record' },
-        { n: '10,710', k: 'Passing Yards', s: 'UCLA all-time record' },
-        { n: '88', k: 'Touchdown Passes', s: 'UCLA all-time record' },
-        { n: '12,536', k: 'Total Offense', s: 'UCLA all-time record' },
-        { n: '157.4', k: 'Passer Efficiency', s: '2022 · 27 TD passes' },
-      ],
-      footnote:
-        'Sophomore season was his first as a full-time starter. The 2022 completion mark set a UCLA single-season record; career totals stand as program all-time records. Figures from UCLA Athletics and public records.',
-      biggerPicture:
-        'From 59% to 69.6%. From 12 interceptions to all-time records. The data tracks exactly how decision-making improves when the brain is trained deliberately — pattern recognition sharpens, errors recover faster, and performance under pressure becomes consistent instead of unpredictable. What started with one quarterback spread through the entire program. UCLA went on to land Dante Moore — the #3 quarterback and #4 overall recruit in his class — who pointed to that development culture as a reason he chose the school.',
-    },
-    {
-      kicker: 'Story 02 — Volleyball',
-      headline: 'Back-to-Back. National Champions.',
-      body: '17 years without a national title. Then back-to-back championships. What changed was how they made decisions when matches got tight.',
-      before: { tag: 'Championship drought', value: '17 yrs' },
-      after: { tag: '2023 & 2024', value: 'National Champions ×2' },
-      stats: [
-        { n: '14', k: 'Straight Wins', s: 'To close 2023 & claim the title' },
-        { n: '2×', k: 'Back-to-Back', s: 'First repeat since 1995–96' },
-        { n: 'No. 1', k: 'Final Ranking', s: 'Top seed, 2024' },
-      ],
-      footnote:
-        'UCLA won 14 straight matches to close the 2023 season and claim the national title, then won 15 of its last 16 in 2024 to repeat — the program’s first back-to-back championships since 1995–96. Figures from NCAA and public records.',
-      biggerPicture:
-        '14 straight wins to close a season no one expected them to win. Then 15 of 16 to repeat. That kind of run under pressure doesn’t happen by accident — it happens when a team has trained how to decide in the moments that determine championships. Two titles. Two years.',
-    },
-  ] as UclaStory[],
-}
-
-function StatBlock({ before, after, stats, footnote }: { before: BeforeAfter; after: BeforeAfter; stats: Stat[]; footnote: string }) {
+function StatBlock({ study }: { study: CaseStudy }) {
   return (
     <div className="border border-line bg-surface-2 rounded-sm p-6 sm:p-8">
       <div className="flex flex-col sm:flex-row gap-8 mb-8 pb-8 border-b border-line">
         <div>
           <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-pp-muted mb-1">Before</div>
-          <div className="text-bone-dim text-[14px]">{before.tag}: {before.value}</div>
+          <div className="text-bone-dim text-[14px]">{study.before.tag}: {study.before.value}</div>
         </div>
         <div className="text-venom text-2xl self-center">→</div>
         <div>
           <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-1">After</div>
-          <div className="text-bone text-[14px] font-semibold">{after.tag}: {after.value}</div>
+          <div className="text-bone text-[14px] font-semibold">{study.after.tag}: {study.after.value}</div>
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        {stats.map((s) => (
+        {study.stats.map((s) => (
           <div key={s.k}>
             <div className="text-bone text-2xl font-extrabold leading-none mb-1">{s.n}</div>
             <div className="text-venom font-mono text-[10px] tracking-[0.14em] uppercase mb-0.5">{s.k}</div>
@@ -155,143 +156,73 @@ function StatBlock({ before, after, stats, footnote }: { before: BeforeAfter; af
           </div>
         ))}
       </div>
-      <p className="text-pp-muted text-[11px] font-mono mt-6 pt-4 border-t border-line">{footnote}</p>
+      <p className="text-pp-muted text-[11px] font-mono mt-6 pt-4 border-t border-line">{study.footnote}</p>
     </div>
   )
 }
 
-function BiggerPicture({ h, body }: { h?: string; body: string }) {
-  return (
-    <div className="mt-8 border-l-2 border-venom pl-5 max-w-3xl">
-      <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">The Bigger Picture</div>
-      {h && <h4 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">{h}</h4>}
-      <p className="text-bone-dim text-[15px] leading-relaxed">{body}</p>
-    </div>
-  )
-}
-
-// Shared collapsible shell — collapsed header + animated expandable body.
-function CollapsibleCard({
-  label,
-  headline,
-  deck,
-  pill,
-  children,
-}: {
-  label: string
-  headline: string
-  deck: string
-  pill: React.ReactNode
-  children: React.ReactNode
-}) {
+function CaseStudyRow({ study }: { study: CaseStudy }) {
   const [open, setOpen] = useState(false)
 
   return (
     <div className="reveal border border-line bg-surface rounded-sm overflow-hidden">
+      {/* Collapsed header — always visible */}
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
         className="w-full text-left px-6 sm:px-8 py-7 hover:bg-surface-2/40 transition-colors duration-200"
       >
-        <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-3">{label}</div>
+        <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-3">
+          {study.label}
+        </div>
         <h3 className="text-bone text-2xl sm:text-3xl lg:text-4xl font-extrabold uppercase tracking-tight leading-none mb-4">
-          {headline}
+          {study.headline}
         </h3>
-        <p className="text-bone-dim text-[15px] leading-relaxed max-w-3xl mb-5">{deck}</p>
+        <p className="text-bone-dim text-[15px] leading-relaxed max-w-3xl mb-5">{study.deck}</p>
         <div className="flex flex-wrap items-center gap-4">
-          {pill}
+          <span className="inline-flex items-center gap-2.5 font-mono text-[12px] text-bone-dim">
+            <span className="text-pp-muted">{study.before.value}</span>
+            <span className="text-venom">→</span>
+            <span className="text-bone font-semibold">{study.after.value}</span>
+          </span>
           <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-venom ml-auto">
             {open ? 'Show less ↑' : 'Read more ↓'}
           </span>
         </div>
       </button>
 
+      {/* Expandable detail — animated via grid-rows 0fr → 1fr */}
       <div
         className="grid transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]"
         style={{ gridTemplateRows: open ? '1fr' : '0fr' }}
       >
         <div className="overflow-hidden">
-          <div className="px-6 sm:px-8 pb-8 pt-2 border-t border-line">{children}</div>
+          <div className="px-6 sm:px-8 pb-8 pt-2 border-t border-line">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10 mt-8">
+              <div>
+                <h4 className="text-venom font-mono text-[11px] tracking-[0.2em] uppercase mb-3">The Starting Point</h4>
+                <h5 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">{study.startingPoint.h}</h5>
+                <p className="text-bone-dim text-[15px] leading-relaxed">{study.startingPoint.body}</p>
+              </div>
+              <div>
+                <h4 className="text-venom font-mono text-[11px] tracking-[0.2em] uppercase mb-3">The Method</h4>
+                <h5 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">{study.method.h}</h5>
+                <p className="text-bone-dim text-[15px] leading-relaxed">{study.method.body}</p>
+              </div>
+            </div>
+
+            <StatBlock study={study} />
+
+            <div className="mt-8 border-l-2 border-venom pl-5 max-w-3xl">
+              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-venom mb-2">The Bigger Picture</div>
+              <h4 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">{study.biggerPicture.h}</h4>
+              <p className="text-bone-dim text-[15px] leading-relaxed">{study.biggerPicture.body}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
-
-function BeforeAfterPill({ before, after }: { before: string; after: string }) {
-  return (
-    <span className="inline-flex items-center gap-2.5 font-mono text-[12px] text-bone-dim">
-      <span className="text-pp-muted">{before}</span>
-      <span className="text-venom">→</span>
-      <span className="text-bone font-semibold">{after}</span>
-    </span>
-  )
-}
-
-function RichCard({ study }: { study: RichStudy }) {
-  return (
-    <CollapsibleCard
-      label={study.label}
-      headline={study.headline}
-      deck={study.deck}
-      pill={<BeforeAfterPill before={study.before.value} after={study.after.value} />}
-    >
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-10 mt-8">
-        <div>
-          <h4 className="text-venom font-mono text-[11px] tracking-[0.2em] uppercase mb-3">The Starting Point</h4>
-          <h5 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">{study.startingPoint.h}</h5>
-          <p className="text-bone-dim text-[15px] leading-relaxed">{study.startingPoint.body}</p>
-        </div>
-        <div>
-          <h4 className="text-venom font-mono text-[11px] tracking-[0.2em] uppercase mb-3">The Method</h4>
-          <h5 className="text-bone text-xl font-extrabold uppercase tracking-tight mb-4">{study.method.h}</h5>
-          <p className="text-bone-dim text-[15px] leading-relaxed">{study.method.body}</p>
-        </div>
-      </div>
-
-      <StatBlock before={study.before} after={study.after} stats={study.stats} footnote={study.footnote} />
-
-      <BiggerPicture h={study.biggerPicture.h} body={study.biggerPicture.body} />
-    </CollapsibleCard>
-  )
-}
-
-function UclaCard() {
-  return (
-    <CollapsibleCard
-      label={UCLA_STUDY.label}
-      headline={UCLA_STUDY.headline}
-      deck={UCLA_STUDY.deck}
-      pill={
-        <span className="flex flex-wrap items-center gap-2">
-          {UCLA_STUDY.stories.map((s) => (
-            <span
-              key={s.kicker}
-              className="font-mono text-[10px] tracking-[0.16em] uppercase text-bone-dim border border-line rounded-sm px-2.5 py-1"
-            >
-              {s.kicker.replace('Story 01 — ', '').replace('Story 02 — ', '')}
-            </span>
-          ))}
-        </span>
-      }
-    >
-      <div className="mt-8 flex flex-col gap-12">
-        {UCLA_STUDY.stories.map((story, i) => (
-          <div key={story.kicker} className={i > 0 ? 'border-t border-line pt-12' : ''}>
-            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-3">{story.kicker}</div>
-            <h4 className="text-bone text-2xl sm:text-3xl font-extrabold uppercase tracking-tight leading-none mb-5">
-              {story.headline}
-            </h4>
-            <p className="text-bone-dim text-[15px] leading-relaxed max-w-3xl mb-8">{story.body}</p>
-
-            <StatBlock before={story.before} after={story.after} stats={story.stats} footnote={story.footnote} />
-
-            <BiggerPicture body={story.biggerPicture} />
-          </div>
-        ))}
-      </div>
-    </CollapsibleCard>
   )
 }
 
@@ -300,10 +231,9 @@ export default function CaseStudyList() {
     <section className="py-16 md:py-20 lg:py-[100px] bg-surface border-t border-line">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8">
         <div className="flex flex-col gap-5">
-          {RICH_STUDIES.map((study) => (
-            <RichCard key={study.label} study={study} />
+          {STUDIES.map((study) => (
+            <CaseStudyRow key={study.label} study={study} />
           ))}
-          <UclaCard />
         </div>
       </div>
     </section>

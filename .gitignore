@@ -64,3 +64,4 @@ CAMERON*.mp4
 *.HEIC
 *.mov
 /.plan/
+.playwright-mcp/

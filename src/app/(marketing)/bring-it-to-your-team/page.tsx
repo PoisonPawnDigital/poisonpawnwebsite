@@ -226,6 +226,27 @@ export default function BringItToYourTeamPage() {
         </div>
       </section>
 
+      {/* Closing CTA — Apply for Training */}
+      <section className="py-16 md:py-20 lg:py-[120px] bg-obsidian border-t border-line">
+        <div className="max-w-[1200px] mx-auto px-5 sm:px-8 text-center">
+          <div className="reveal">
+            <div className="font-mono text-[11px] tracking-[0.24em] uppercase text-venom mb-6">Apply</div>
+            <h2 className="text-bone text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight leading-none mb-6">
+              Perform At A<br />Different Level.
+            </h2>
+            <p className="text-bone-dim text-[16px] leading-relaxed max-w-xl mx-auto mb-10">
+              Tell us about your program and we&apos;ll take it from there.
+            </p>
+            <a
+              href="/contact"
+              className="inline-block bg-venom text-black font-semibold text-sm tracking-[0.08em] uppercase px-8 py-4 rounded-sm hover:bg-gold-bright transition-colors duration-200"
+            >
+              Apply For Training →
+            </a>
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }

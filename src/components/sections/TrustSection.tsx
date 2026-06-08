@@ -1,15 +1,13 @@
-import Image from 'next/image'
-
 const clients = [
-  { name: 'Porsche',               src: '/logos/porsche.svg',               width: 4500, height: 300 },
-  { name: 'YPO',                   src: '/logos/ypo.svg',                   width:  360, height: 160 },
-  { name: 'Panda Restaurant Group',src: '/logos/panda-restaurant-group.svg',width:  191, height:  15 },
-  { name: 'UCLA',                  src: '/logos/ucla.svg',                  width:  250, height: 123 },
-  { name: 'Michigan State',        src: '/logos/michigan-state.svg',        width:  309, height: 359 },
-  { name: 'Toronto Blue Jays',     src: '/logos/toronto-blue-jays.svg',     width:  311, height:  30 },
-  { name: 'USA Swimming',          src: '/logos/usa-swimming.svg',          width:  184, height: 150 },
-  { name: 'NY Giants',             src: '/logos/ny-giants.svg',             width:  193, height: 150 },
-  { name: 'NFLPA',                 src: '/logos/nflpa.svg',                 width:   71, height:  22 },
+  { name: 'Porsche',               src: '/logos/porsche.svg' },
+  { name: 'YPO',                   src: '/logos/ypo.svg' },
+  { name: 'Panda Restaurant Group',src: '/logos/panda-restaurant-group.svg' },
+  { name: 'UCLA',                  src: '/logos/ucla.svg' },
+  { name: 'Michigan State',        src: '/logos/michigan-state.svg' },
+  { name: 'Toronto Blue Jays',     src: '/logos/toronto-blue-jays.svg' },
+  { name: 'USA Swimming',          src: '/logos/usa-swimming.svg' },
+  { name: 'NY Giants',             src: '/logos/ny-giants.svg' },
+  { name: 'NFLPA',                 src: '/logos/nflpa.svg' },
 ]
 
 export default function TrustSection() {
@@ -23,22 +21,22 @@ export default function TrustSection() {
         </span>
       </div>
       <div className="relative">
-        <div className="flex items-center gap-6 animate-marquee whitespace-nowrap">
+        <div className="flex items-center gap-12 animate-marquee whitespace-nowrap">
           {all.map((client, i) => (
             <div
               key={i}
-              className="relative flex-shrink-0 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
-              style={{ width: 138, height: 54 }}
+              className="flex-shrink-0 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity"
+              style={{ height: 54 }}
             >
-              <div className="relative" style={{ width: 112, height: 34 }}>
-                <Image
-                  src={client.src}
-                  alt={client.name}
-                  fill
-                  className="object-contain [filter:grayscale(1)_brightness(0)_invert(1)]"
-                  unoptimized
-                />
-              </div>
+              {/* Uniform height keeps every logo the same visual size regardless of
+                  aspect ratio; the filter renders each as a clean grayscale (white)
+                  mark with no background on the dark bar. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={client.src}
+                alt={client.name}
+                className="h-[26px] w-auto object-contain [filter:grayscale(1)_brightness(0)_invert(1)]"
+              />
             </div>
           ))}
         </div>
