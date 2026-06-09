@@ -210,13 +210,12 @@ export default function MediaPage() {
           </div>
           <div className="reveal max-w-3xl">
             <div className="aspect-video rounded-sm overflow-hidden">
-              <iframe
-                src="https://player.vimeo.com/video/544334933?title=0&byline=0&portrait=0&badge=0&dnt=1"
-                width="100%"
-                height="100%"
-                allow="autoplay; fullscreen; picture-in-picture"
-                title="Featured ESPN Video"
-                className="w-full h-full"
+              <video
+                src="/video/espn-poison-pawn.mp4"
+                controls
+                preload="metadata"
+                playsInline
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
